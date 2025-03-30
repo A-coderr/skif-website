@@ -1,49 +1,39 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-const navVariants = {
-  hidden: { opacity: 0, x: -50 }, // Start slightly left and invisible
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-      staggerChildren: 0.2, // Each child appears one by one
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 0 }, // Start lower
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-};
-
-const NavMenu = () => {
+const Navbar = () => {
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={navVariants}
-      className="fixed inset-0 flex items-center justify-center"
+    <motion.nav
+      className="fixed top-0 left-0 w-full bg-white flex justify-center items-center gap-10"
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      <nav className="transform -translate-x-50">
-        <ul className="flex flex-col space-y-6 text-6xl font-bold">
-          {["Home", "About", "Services", "Contact"].map((item, index) => (
-            <motion.li key={index} variants={itemVariants}>
-              <Link href={`/${item.toLowerCase()}`}>
-                <span className="hover:text-[#E63946] transition duration-300 cursor-pointer">
-                  {item}
-                </span>
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
-      </nav>
-    </motion.div>
+      {/* Left Menu */}
+      <div className="flex gap-8">
+        <div className="text-lg cursor-pointer">Instructors</div>
+        <div className="text-lg cursor-pointer">Schedule</div>
+      </div>
+
+      {/* Logo in the Center */}
+      <div className="">
+        <Image
+          src="/skiflogo.png"
+          alt="Logo"
+          width={100} // Set the width you want for the logo
+          height={50}
+        />
+      </div>
+
+      {/* Right Menu */}
+      <div className="flex gap-8">
+        <div className="text-lg cursor-pointer">Blog</div>
+        <div className="text-lg cursor-pointer">Contact</div>
+      </div>
+    </motion.nav>
   );
 };
 
-export default NavMenu;
+export default Navbar;
