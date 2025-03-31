@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Skif Canada",
+  title: "SKIF Karate Canada",
   description: "Karate Website",
 };
 
