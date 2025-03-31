@@ -18,7 +18,7 @@ const Navbar = () => {
       </div>
 
       {/* Logo in the Center */}
-      <div className="">
+      <div className="py-2">
         <Image
           src="/skiflogo.png"
           alt="Logo"
