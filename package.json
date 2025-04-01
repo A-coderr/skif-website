@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@react-spring/three": "^9.7.5",
-    "@react-three/drei": "^9.122.0",
+    "@react-three/drei": "^10.0.5",
     "@react-three/fiber": "^9.1.1",
     "@types/three": "^0.175.0",
     "framer-motion": "^12.6.2",
