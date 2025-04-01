@@ -23,7 +23,7 @@ export const Karate = () => {
           <h1 className="text-5xl font-extrabold text-left text-gray-800 mb-12">
             What is Karate?
           </h1>
-          <p className="text-md leading-relaxed text-gray-800 transition-all duration-500 hover:text-amber-700">
+          <p className="text-md leading-relaxed text-gray-800 transition-all duration-500 hover:text-[#B71C1C]">
             The word <strong>karate</strong> is a combination of two Japanese
             characters: <strong>kara</strong>, meaning &quot;empty,&quot; and{" "}
             <strong>te</strong>, meaning &quot;hand&quot;; thus karate means
@@ -33,7 +33,7 @@ export const Karate = () => {
             applications. In traditional karate-do, we always keep in mind that
             the true opponent is oneself.
           </p>
-          <p className="text-md leading-relaxed text-gray-800 transition-all duration-500 hover:text-amber-700">
+          <p className="text-md leading-relaxed text-gray-800 transition-all duration-500 hover:text-[#B71C1C]">
             Karate is many things. It is an excellent and well-balanced form of
             exercise. It is a highly evolved means of self-defense. It is not
             merely a sport or form of exercise, although it does incorporate
@@ -43,7 +43,7 @@ export const Karate = () => {
             a way of life. Most importantly, karate is a means of personal
             character development and improvement.
           </p>
-          <p className="text-md leading-relaxed text-gray-800 transition-all duration-500 hover:text-amber-700">
+          <p className="text-md leading-relaxed text-gray-800 transition-all duration-500 hover:text-[#B71C1C]">
             The practice of karate is divided into three elements:{" "}
             <strong>Kihon</strong> (basics), <strong>Kata</strong> (forms), and{" "}
             <strong>Kumite</strong> (sparring). However, these three elements

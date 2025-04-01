@@ -20,13 +20,13 @@ const Navbar = () => {
       <div className="hidden md:flex gap-8">
         <Link
           href="/instructors"
-          className="text-lg cursor-pointer hover:text-gray-500"
+          className="text-lg cursor-pointer hover:text-[#B71C1C]"
         >
           Instructors
         </Link>
         <Link
           href="/schedule"
-          className="text-lg cursor-pointer hover:text-gray-500"
+          className="text-lg cursor-pointer hover:text-[#B71C1C]"
         >
           Schedule
         </Link>
@@ -49,13 +49,13 @@ const Navbar = () => {
       <div className="hidden md:flex gap-8">
         <Link
           href="/blog"
-          className="text-lg cursor-pointer hover:text-gray-500"
+          className="text-lg cursor-pointer hover:text-[#B71C1C]"
         >
           Blog
         </Link>
         <Link
           href="/contact"
-          className="text-lg cursor-pointer hover:text-gray-500"
+          className="text-lg cursor-pointer hover:text-[#B71C1C]"
         >
           Contact
         </Link>
