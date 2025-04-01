@@ -49,7 +49,7 @@ export default function HeroSection() {
           className="relative px-5 py-2 mt-15 text-lg font-thin text-white border-1 border-white overflow-hidden transition-all duration-300 group"
         >
           <span className="relative z-5 transition-all duration-300 group-hover:text-gray-900">
-            CONTACT US
+            Contact Us
           </span>
           <span className="absolute top-0 left-0 w-0 h-full bg-white transition-all duration-300 group-hover:w-full"></span>
         </motion.a>
