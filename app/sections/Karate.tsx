@@ -1,8 +1,7 @@
 "use client";
 
-import { Center, OrbitControls, Text3D } from "@react-three/drei";
+import { Center, Text3D } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Image from "next/image";
 import React, { Suspense } from "react";
 
 export const Karate = () => {
@@ -44,33 +43,40 @@ export const Karate = () => {
             </p>
           </div>
 
-          {/* Right Side: Image */}
-          <div className="w-full md:w-1/2 flex justify-center items-center">
-            <div className="relative overflow-hidden shadow-lg transition-all duration-500">
-              <Image
-                src="/hero.jpg"
-                alt="Karate"
-                width={500}
-                height={500}
-                className="object-fill"
-              />
-            </div>
-            {/* <Canvas camera={{ position: [0, 0, 5] }}>
+          {/* Right Side: Kanji */}
+          <div className="w-full h-[60vh] md:w-1/2 flex justify-center items-center">
+            <Canvas
+              camera={{ position: [0, 0, 5] }}
+              className="touch-none overflow-hidden"
+            >
               <ambientLight intensity={0.5} />
               <directionalLight position={[2, 2, 2]} intensity={1} />
               <Suspense fallback={null}>
                 <Center>
                   <Text3D
-                    font="/fonts/helvetiker_regular.typeface.json"
-                    size={1}
+                    font="/fonts/NotoSansJP_ExtraBold_Regular.json"
+                    size={2}
+                    height={0.5}
+                    position={[0, 1.5, 0]}
+                    rotation={[0.2, 0.5, 0]}
                   >
-                    K A R A T E
-                    <meshStandardMaterial color="red" />
+                    空
+                    <meshStandardMaterial color="black" />
+                  </Text3D>
+
+                  <Text3D
+                    font="/fonts/NotoSansJP_ExtraBold_Regular.json"
+                    size={2}
+                    height={0.5}
+                    position={[0, -1.5, 0]}
+                    rotation={[0.2, 0.5, 0]}
+                  >
+                    手
+                    <meshStandardMaterial color="black" />
                   </Text3D>
                 </Center>
               </Suspense>
-              <OrbitControls />
-            </Canvas> */}
+            </Canvas>
           </div>
         </div>
       </section>
