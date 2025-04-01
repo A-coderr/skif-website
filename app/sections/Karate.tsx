@@ -1,11 +1,15 @@
+"use client";
+
+import { Center, OrbitControls, Text3D } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import Image from "next/image";
-import React from "react";
+import React, { Suspense } from "react";
 
 export const Karate = () => {
   return (
     <>
-      <section className="max-w-7xl mx-auto min-h-[70vh]">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+      <section className="max-w-7xl mx-auto min-h-[70vh] flex items-center justify-center">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
           {/* Left Side: Text */}
           <div className="w-full md:w-1/2 text-left md:text-left space-y-6">
             <h1 className="text-5xl font-extrabold text-left text-gray-800 mb-12">
@@ -42,15 +46,31 @@ export const Karate = () => {
 
           {/* Right Side: Image */}
           <div className="w-full md:w-1/2">
-            <div className="relative overflow-hidden rounded-lg shadow-lg transition-all duration-500 hover:scale-105">
+            <div className="relative overflow-hidden shadow-lg transition-all duration-500">
               <Image
                 src="/hero.jpg"
                 alt="Karate"
                 width={500}
                 height={500}
-                className="object-cover"
+                className="object-fill"
               />
             </div>
+            {/* <Canvas camera={{ position: [0, 0, 5] }}>
+              <ambientLight intensity={0.5} />
+              <directionalLight position={[2, 2, 2]} intensity={1} />
+              <Suspense fallback={null}>
+                <Center>
+                  <Text3D
+                    font="/fonts/helvetiker_regular.typeface.json"
+                    size={1}
+                  >
+                    K A R A T E
+                    <meshStandardMaterial color="red" />
+                  </Text3D>
+                </Center>
+              </Suspense>
+              <OrbitControls />
+            </Canvas> */}
           </div>
         </div>
       </section>
