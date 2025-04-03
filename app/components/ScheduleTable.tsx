@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 // Type definitions for the classes
 type Class = {
   day: string;
@@ -172,7 +172,12 @@ export default function ScheduleTable() {
 
   return (
     <section className="w-full min-h-[60vh] flex justify-center p-6">
-      <div className="flex flex-col w-full max-w-7xl justify-start">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col w-full max-w-7xl justify-start"
+      >
         <div className="w-full text-left mb-6">
           <h1 className="text-4xl lg:text-6xl font-bold text-gray-800">
             Schedule 2024-2025
@@ -180,9 +185,14 @@ export default function ScheduleTable() {
         </div>
 
         {/* Mobile Grid Layout */}
-        <div className="grid gap-4 md:hidden w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="grid gap-4 md:hidden w-full"
+        >
           <Tabs classes={classes} />
-        </div>
+        </motion.div>
 
         {/* Desktop Table Layout */}
         <div className="hidden md:block w-full">
@@ -255,7 +265,7 @@ export default function ScheduleTable() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
