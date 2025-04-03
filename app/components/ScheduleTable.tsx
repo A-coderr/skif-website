@@ -34,16 +34,17 @@ const Tabs: React.FC<TabsProps> = ({ classes }) => {
   return (
     <>
       {/* Tabs for days */}
-      <div className="flex w-full">
+      <div className="flex w-full justify-center space-x-4">
         {days.map((day, index) => (
           <button
             key={index}
-            className={`py-4 px-4 mr-4 rounded-lg transition-all duration-300
-        ${
-          activeTab === index
-            ? "bg-gray-800 text-white font-semibold shadow-lg"
-            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-        }`}
+            className={`py-4 px-4 rounded-lg transition-all duration-300
+          flex-1
+          ${
+            activeTab === index
+              ? "bg-gray-800 text-white font-semibold shadow-lg"
+              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+          }`}
             onClick={() => setActiveTab(index)}
           >
             {day}
