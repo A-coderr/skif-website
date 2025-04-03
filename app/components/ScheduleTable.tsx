@@ -171,13 +171,14 @@ export default function ScheduleTable() {
   };
 
   return (
-    <section className="w-full min-h-[70vh] flex justify-center p-6">
-      <div className="flex flex-col w-full max-w-7xl items-center justify-start">
-        <div className="w-full text-left">
-          <h1 className="text-2xl md:text-6xl font-bold mb-6 text-gray-800">
+    <section className="w-full min-h-[60vh] flex justify-center p-6">
+      <div className="flex flex-col w-full max-w-7xl justify-start">
+        <div className="w-full text-left mb-6">
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-gray-800">
             Schedule 2024-2025
           </h1>
         </div>
+
         {/* Mobile Grid Layout */}
         <div className="grid gap-4 md:hidden w-full">
           <Tabs classes={classes} />
@@ -185,36 +186,38 @@ export default function ScheduleTable() {
 
         {/* Desktop Table Layout */}
         <div className="hidden md:block w-full">
-          <div className="w-full flex flex-col md:flex-row justify-center items-center">
-            <div className="w-20 flex flex-col">
-              <div className="h-12 border border-gray-100 bg-gray-300 text-white flex items-center justify-center font-bold"></div>
+          <div className="w-full flex flex-col md:flex-row justify-center">
+            {/* Time Column */}
+            <div className="w-20 flex flex-col pt-2">
               {timeSlots.map((hour) => (
                 <div
                   key={hour}
-                  className="h-20 border border-gray-100 flex items-center justify-center bg-gray-200"
+                  className="h-20 border justify-center items-center border-[#f9f9f9] flex bg-[#f9f9f9] text-xs md:text-sm"
                 >
                   {formatTime(hour)}
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-7 flex-grow border-l border-gray-100">
+
+            {/* Days and Classes */}
+            <div className="grid grid-cols-1 md:grid-cols-6 flex-grow border-l border-gray-100">
               {days.map((day) => (
                 <div
                   key={day}
                   className="flex flex-col border-r w-full relative border-gray-300"
                 >
-                  <div className="h-12 border-b bg-gray-800 text-white font-bold flex items-center justify-center">
+                  <div className="h-12 border-b bg-gray-800 text-white font-bold text-sm flex items-center justify-center">
                     {day}
                   </div>
                   <div className="relative flex-grow grid grid-rows-20">
                     {timeSlots.flatMap((hour) => [
                       <div
                         key={`${day}-${hour}-0`}
-                        className="h-10 border border-gray-100 bg-gray-50"
+                        className="h-10 border border-gray-100 bg-gray-50 text-xs md:text-sm"
                       ></div>,
                       <div
                         key={`${day}-${hour}-30`}
-                        className="h-10 border border-gray-200 bg-gray-100"
+                        className="h-10 border border-gray-200 bg-gray-100 text-xs md:text-sm"
                       ></div>,
                     ])}
                     {classes
@@ -231,7 +234,9 @@ export default function ScheduleTable() {
                           <div className="text-xs font-semibold">
                             {cls.time}
                           </div>
-                          <div className="text-lg font-bold">{cls.name}</div>
+                          <div className="text-sm font-bold truncate">
+                            {cls.name}
+                          </div>
                         </div>
                       ))}
                   </div>
