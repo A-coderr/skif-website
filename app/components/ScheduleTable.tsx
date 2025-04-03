@@ -174,7 +174,7 @@ export default function ScheduleTable() {
     <section className="w-full min-h-[60vh] flex justify-center p-6">
       <div className="flex flex-col w-full max-w-7xl justify-start">
         <div className="w-full text-left mb-6">
-          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-gray-800">
+          <h1 className="text-4xl lg:text-6xl font-bold text-gray-800">
             Schedule 2024-2025
           </h1>
         </div>
