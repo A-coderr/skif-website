@@ -1,3 +1,74 @@
+import { useState } from "react";
+
+// Type definitions for the classes
+type Class = {
+  day: string;
+  time: string;
+  start: number;
+  duration: number;
+  name: string;
+  color: string;
+};
+
+type TabsProps = {
+  classes: Class[];
+};
+
+const Tabs: React.FC<TabsProps> = ({ classes }) => {
+  const [activeTab, setActiveTab] = useState<number>(0);
+
+  // Group classes by day
+  const groupedClasses = classes.reduce(
+    (acc: Record<string, Class[]>, curr) => {
+      if (!acc[curr.day]) {
+        acc[curr.day] = [];
+      }
+      acc[curr.day].push(curr);
+      return acc;
+    },
+    {}
+  );
+
+  const days = Object.keys(groupedClasses);
+
+  return (
+    <>
+      {/* Tabs for days */}
+      <div className="flex w-full">
+        {days.map((day, index) => (
+          <button
+            key={index}
+            className={`py-4 px-4 mr-4 rounded-lg transition-all duration-300
+        ${
+          activeTab === index
+            ? "bg-gray-800 text-white font-semibold shadow-lg"
+            : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+        }`}
+            onClick={() => setActiveTab(index)}
+          >
+            {day}
+          </button>
+        ))}
+      </div>
+
+      {/* Classes content */}
+      <div className="mt-4">
+        <div className="grid grid-cols-1 gap-4">
+          {groupedClasses[days[activeTab]].map((classItem, index) => (
+            <div
+              key={index}
+              className={`p-4 rounded-lg shadow-lg ${classItem.color}`}
+            >
+              <h3 className="text-xl font-semibold mb-2">{classItem.name}</h3>
+              <p>{classItem.time}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
+
 export default function ScheduleTable() {
   const classes = [
     {
@@ -98,16 +169,6 @@ export default function ScheduleTable() {
     return `${formattedHour} ${period}`;
   };
 
-  const scheduleData = [
-    { time: "9:00 AM", event: "Kids Class", color: "bg-[#A7E8BD] text-black" },
-    {
-      time: "11:00 AM",
-      event: "Intermediate Class",
-      color: "bg-[#5C7AEA] text-white",
-    },
-    { time: "6:00 PM", event: "Adult Class", color: "bg-[#F5A25D] text-black" },
-  ];
-
   return (
     <section className="w-full min-h-[70vh] flex justify-center p-6">
       <div className="flex flex-col w-full max-w-7xl items-center justify-start">
@@ -118,15 +179,7 @@ export default function ScheduleTable() {
         </div>
         {/* Mobile Grid Layout */}
         <div className="grid gap-4 md:hidden w-full">
-          {scheduleData.map((item, index) => (
-            <div
-              key={index}
-              className={`p-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 ${item.color}`}
-            >
-              <h3 className="text-lg font-semibold">{item.event}</h3>
-              <p className="text-sm">{item.time}</p>
-            </div>
-          ))}
+          <Tabs classes={classes} />
         </div>
 
         {/* Desktop Table Layout */}
