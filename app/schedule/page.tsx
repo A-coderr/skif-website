@@ -5,7 +5,7 @@ import ScheduleTable from "../components/ScheduleTable";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export const SchedulePage = () => {
+export default function SchedulePage() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -28,6 +28,4 @@ export const SchedulePage = () => {
       <ScheduleTable />
     </>
   );
-};
-
-export default SchedulePage;
+}
