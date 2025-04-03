@@ -209,17 +209,27 @@ export default function ScheduleTable() {
                   <div className="h-12 border-b bg-gray-800 text-white font-bold text-sm flex items-center justify-center">
                     {day}
                   </div>
-                  <div className="relative flex-grow grid grid-rows-20">
-                    {timeSlots.flatMap((hour) => [
-                      <div
-                        key={`${day}-${hour}-0`}
-                        className="h-10 border border-gray-100 bg-gray-50 text-xs md:text-sm"
-                      ></div>,
-                      <div
-                        key={`${day}-${hour}-30`}
-                        className="h-10 border border-gray-200 bg-gray-100 text-xs md:text-sm"
-                      ></div>,
-                    ])}
+                  <div className="relative flex-grow grid grid-rows-19">
+                    {timeSlots.flatMap((hour, index) => {
+                      const isLastHour = index === timeSlots.length - 1;
+                      return isLastHour
+                        ? [
+                            <div
+                              key={`${day}-${hour}-0`}
+                              className="h-10 border border-gray-100 bg-gray-50 text-xs md:text-sm"
+                            ></div>,
+                          ]
+                        : [
+                            <div
+                              key={`${day}-${hour}-0`}
+                              className="h-10 border border-gray-100 bg-gray-50 text-xs md:text-sm"
+                            ></div>,
+                            <div
+                              key={`${day}-${hour}-30`}
+                              className="h-10 border border-gray-200 bg-gray-100 text-xs md:text-sm"
+                            ></div>,
+                          ];
+                    })}
                     {classes
                       .filter((cls) => cls.day === day)
                       .map((cls) => (
