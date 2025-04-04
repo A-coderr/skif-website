@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Instructors from "../sections/Instructors";
 
 export default function InstructorsPage() {
   const ref = useRef(null);
@@ -24,7 +25,7 @@ export default function InstructorsPage() {
           className="absolute inset-0 w-full h-full bg-[url('/karate.jpg')] bg-cover bg-center opacity-20"
         />
       </section>
-      <div>Instructors</div>
+      <Instructors />
     </>
   );
 }
