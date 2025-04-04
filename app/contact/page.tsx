@@ -2,8 +2,9 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Contact from "../sections/Contact";
 
-export default function InstructorsPage() {
+export default function ContactPage() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -24,7 +25,7 @@ export default function InstructorsPage() {
           className="absolute inset-0 w-full h-full bg-[url('/karate.jpg')] bg-cover bg-center opacity-20"
         />
       </section>
-      <div>Contact</div>
+      <Contact />
     </>
   );
 }
