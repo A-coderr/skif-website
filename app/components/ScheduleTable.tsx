@@ -200,20 +200,26 @@ export default function ScheduleTable() {
             {/* Time Column */}
             <div className="w-20 flex flex-col pt-2">
               {timeSlots.map((hour) => (
-                <div
+                <motion.div
                   key={hour}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.2, delay: hour * 0.04 }}
                   className="h-20 border justify-center items-center border-[#f9f9f9] flex bg-[#f9f9f9] text-xs md:text-sm"
                 >
                   {formatTime(hour)}
-                </div>
+                </motion.div>
               ))}
             </div>
 
             {/* Days and Classes */}
             <div className="grid grid-cols-1 md:grid-cols-6 flex-grow border-l border-gray-100">
               {days.map((day) => (
-                <div
+                <motion.div
                   key={day}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.1 }}
                   className="flex flex-col border-r w-full relative border-gray-300"
                 >
                   <div className="h-12 border-b bg-gray-800 text-white font-bold text-sm flex items-center justify-center">
@@ -260,7 +266,7 @@ export default function ScheduleTable() {
                         </div>
                       ))}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
