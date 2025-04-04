@@ -31,23 +31,25 @@ const Tabs: React.FC<TabsProps> = ({ classes }) => {
 
   const days = Object.keys(groupedClasses);
 
+  const abbreviateDay = (day: string) => day.slice(0, 3);
+
   return (
     <>
       {/* Tabs for days */}
-      <div className="flex w-full justify-center space-x-4">
+      <div className="flex w-full overflow-x-auto no-scrollbar gap-2 px-2">
         {days.map((day, index) => (
           <button
             key={index}
-            className={`py-4 px-4 rounded-lg transition-all duration-300
-          flex-1
-          ${
-            activeTab === index
-              ? "bg-gray-800 text-white font-semibold shadow-lg"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-          }`}
+            className={`flex-1 min-w-[64px] py-3 px-4 text-base rounded-lg text-center transition-all duration-300
+    ${
+      activeTab === index
+        ? "bg-gray-800 text-white font-semibold shadow-lg"
+        : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+    }`}
             onClick={() => setActiveTab(index)}
           >
-            {day}
+            <span className="block md:hidden">{abbreviateDay(day)}</span>
+            <span className="hidden md:block">{day}</span>
           </button>
         ))}
       </div>
@@ -179,8 +181,8 @@ export default function ScheduleTable() {
         className="flex flex-col w-full max-w-7xl justify-start"
       >
         <div className="w-full text-left mb-6">
-          <h1 className="text-4xl lg:text-6xl font-bold text-gray-800">
-            Schedule 2024-2025
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800">
+            Schedule 2024–2025
           </h1>
         </div>
 
