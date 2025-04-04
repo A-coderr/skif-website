@@ -1,4 +1,5 @@
 import React from "react";
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
@@ -7,19 +8,32 @@ const Contact = () => {
         Contact Us
       </h1>
 
-      <div className="flex flex-col md:flex-row justify-between p-6">
+      <div className="flex flex-col md:flex-row justify-between items-center py-6">
         {/* Left Side */}
-        <div className="w-full md:w-1/2 space-y-4">
-          <p>
-            <strong>Location:</strong> 2233 Hurontario St, Mississauga, ON L5A
-            2E9
-          </p>
-          <p>
-            <strong>Email:</strong> skiftorontokaratedo@hotmail.com
-          </p>
-          <p>
-            <strong>Phone:</strong> (905) 275-9395
-          </p>
+        <div className="w-full md:w-1/2 space-y-4 md:space-y-8 mb-6">
+          {/* Location */}
+          <div className="flex items-center space-x-3">
+            <FaMapMarkerAlt className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-gray-600 flex-shrink-0" />
+            <p className="text-xs sm:text-base md:text-md lg:text-lg truncate">
+              <strong>2233 Hurontario St, Mississauga, ON L5A 2E9</strong>
+            </p>
+          </div>
+
+          {/* Email */}
+          <div className="flex items-center space-x-3">
+            <FaEnvelope className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-gray-600 flex-shrink-0" />
+            <p className="text-xs sm:text-base md:text-md lg:text-lg truncate">
+              <strong>skiftorontokaratedo@hotmail.com</strong>
+            </p>
+          </div>
+
+          {/* Phone */}
+          <div className="flex items-center space-x-3">
+            <FaPhoneAlt className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-gray-600 flex-shrink-0" />
+            <p className="text-xs sm:text-base md:text-md lg:text-lg truncate">
+              <strong>(905) 275-9395</strong>
+            </p>
+          </div>
         </div>
 
         {/* Right Side (Google Maps) */}
@@ -27,7 +41,8 @@ const Contact = () => {
           <iframe
             src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;q=2233%20Hurontario%20St,%20Mississauga,%20ON%20L5A%202E9+(Skif%20Karate%20Canada)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             width="100%"
-            height="400"
+            //height="400" // Default height for larger screens
+            className="h-50 xs:h-50 sm:h-72 md:h-80 lg:h-96" // Adjust height at different screen sizes
             style={{ border: 0 }}
             loading="lazy"
           ></iframe>
