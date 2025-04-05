@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import BlogGallery from "../sections/BlogGallery";
 
 export default function BlogPage() {
   const ref = useRef(null);
@@ -24,6 +25,7 @@ export default function BlogPage() {
           className="absolute inset-0 w-full h-full bg-[url('/karate.jpg')] bg-cover bg-center opacity-20"
         />
       </section>
+      <BlogGallery />
     </>
   );
 }
