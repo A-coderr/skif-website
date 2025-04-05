@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type Instructor = {
   name: string;
@@ -31,22 +32,35 @@ const instructors: Instructor[] = [
 export default function Instructors() {
   return (
     <section className="w-full px-6 pt-6 pb-16 max-w-7xl mx-auto">
-      <h1 className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800">
+      <motion.h1
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800"
+      >
         Meet Our Instructors
-      </h1>
+      </motion.h1>
 
       <div className="space-y-24">
         {instructors.map((instructor, idx) => {
           const isEven = idx % 2 === 0;
 
           return (
-            <div
+            <motion.div
               key={idx}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: idx * 0.2 }}
               className={`flex flex-col md:flex-row ${
                 isEven ? "" : "md:flex-row-reverse"
               } gap-12 items-center`}
             >
-              <div className="w-full md:w-1/2">
+              <motion.div
+                whileHover={{ scale: 1.03 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="w-full md:w-1/2"
+              >
                 <Image
                   src={instructor.image}
                   alt={instructor.name}
@@ -54,7 +68,7 @@ export default function Instructors() {
                   height={500}
                   className="w-full h-auto object-cover shadow-lg"
                 />
-              </div>
+              </motion.div>
               <div className="w-full md:w-1/2 text-left">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {instructor.name}
@@ -66,7 +80,7 @@ export default function Instructors() {
                   {instructor.bio}
                 </p>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>
