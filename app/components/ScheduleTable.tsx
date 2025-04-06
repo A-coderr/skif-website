@@ -40,7 +40,7 @@ const Tabs: React.FC<TabsProps> = ({ classes }) => {
         {days.map((day, index) => (
           <button
             key={index}
-            className={`flex-1 min-w-[64px] py-3 px-4 text-base rounded-lg text-center transition-all duration-300
+            className={`flex-1 min-w-[64px] py-3 px-4 text-base text-center transition-all duration-300
     ${
       activeTab === index
         ? "bg-gray-800 text-white font-semibold shadow-lg"
@@ -58,10 +58,7 @@ const Tabs: React.FC<TabsProps> = ({ classes }) => {
       <div className="mt-4">
         <div className="grid grid-cols-1 gap-4">
           {groupedClasses[days[activeTab]].map((classItem, index) => (
-            <div
-              key={index}
-              className={`p-4 rounded-lg shadow-lg ${classItem.color}`}
-            >
+            <div key={index} className={`p-4 shadow-lg ${classItem.color}`}>
               <h3 className="text-xl font-semibold mb-2">{classItem.name}</h3>
               <p>{classItem.time}</p>
             </div>
@@ -253,7 +250,7 @@ export default function ScheduleTable() {
                       .map((cls) => (
                         <div
                           key={cls.name}
-                          className={`absolute left-0 right-0 shadow-md ${cls.color} rounded-md p-2`}
+                          className={`absolute left-0 right-0 shadow-md ${cls.color} p-2`}
                           style={{
                             top: `${(cls.start - 12) * 40 * 2}px`,
                             height: `${cls.duration * 40 * 2}px`,
