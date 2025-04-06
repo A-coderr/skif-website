@@ -22,6 +22,9 @@ function MDXLayout({ children }: { children: React.ReactNode }) {
   const backgroundImageStyle = {
     backgroundImage: `url('${post?.image || "/hero.png"}')`,
   };
+
+  if (!post) return null; // Return null if post is undefined
+
   return (
     <>
       <section
@@ -35,7 +38,7 @@ function MDXLayout({ children }: { children: React.ReactNode }) {
         />
       </section>
       <div className="max-w-7xl mx-auto px-4 py-20 prose">{children}</div>
-      {post?.gallery?.length > 0 && (
+      {post.gallery?.length > 0 && (
         <section className="max-w-7xl mx-auto px-4 pb-20">
           <h2 className="text-3xl font-bold mb-6 text-gray-800">Gallery</h2>
 

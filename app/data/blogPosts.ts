@@ -6,7 +6,7 @@ export type Post = {
   title: string;
   description?: string;
   slug: string;
-  gallery?: string[];
+  gallery: string[];
 };
 
 export const posts: Post[] = [
@@ -19,6 +19,17 @@ export const posts: Post[] = [
     description:
       "Discover how mastering the fundamentals can lead to better results in both training and competitions.",
     slug: "mastering-the-basics-of-karate",
+    gallery: [
+      "/blogs/karate-canada-nationals-2025/i1.jpg",
+      "/blogs/karate-canada-nationals-2025/i2.jpg",
+      "/blogs/karate-canada-nationals-2025/i3.jpg",
+      "/blogs/karate-canada-nationals-2025/i4.jpg",
+      "/blogs/karate-canada-nationals-2025/i5.jpg",
+      "/blogs/karate-canada-nationals-2025/i6.jpg",
+      "/blogs/karate-canada-nationals-2025/i7.jpg",
+      "/blogs/karate-canada-nationals-2025/i8.jpg",
+      "/blogs/karate-canada-nationals-2025/i9.jpg",
+    ],
   },
   {
     id: 2,
@@ -29,6 +40,17 @@ export const posts: Post[] = [
     description:
       "Learn about the meaning behind each karate belt and what it takes to move up the ranks.",
     slug: "belt-journey-explained",
+    gallery: [
+      "/blogs/karate-canada-nationals-2025/i1.jpg",
+      "/blogs/karate-canada-nationals-2025/i2.jpg",
+      "/blogs/karate-canada-nationals-2025/i3.jpg",
+      "/blogs/karate-canada-nationals-2025/i4.jpg",
+      "/blogs/karate-canada-nationals-2025/i5.jpg",
+      "/blogs/karate-canada-nationals-2025/i6.jpg",
+      "/blogs/karate-canada-nationals-2025/i7.jpg",
+      "/blogs/karate-canada-nationals-2025/i8.jpg",
+      "/blogs/karate-canada-nationals-2025/i9.jpg",
+    ],
   },
   {
     id: 3,
@@ -39,6 +61,17 @@ export const posts: Post[] = [
     description:
       "Start your karate journey with these essential techniques and mindset tips.",
     slug: "training-techniques-for-beginners",
+    gallery: [
+      "/blogs/karate-canada-nationals-2025/i1.jpg",
+      "/blogs/karate-canada-nationals-2025/i2.jpg",
+      "/blogs/karate-canada-nationals-2025/i3.jpg",
+      "/blogs/karate-canada-nationals-2025/i4.jpg",
+      "/blogs/karate-canada-nationals-2025/i5.jpg",
+      "/blogs/karate-canada-nationals-2025/i6.jpg",
+      "/blogs/karate-canada-nationals-2025/i7.jpg",
+      "/blogs/karate-canada-nationals-2025/i8.jpg",
+      "/blogs/karate-canada-nationals-2025/i9.jpg",
+    ],
   },
   {
     id: 4,
@@ -49,6 +82,17 @@ export const posts: Post[] = [
     description:
       "Enhance your sparring skills with these expert tips and strategies.",
     slug: "karate-sparring-tips",
+    gallery: [
+      "/blogs/karate-canada-nationals-2025/i1.jpg",
+      "/blogs/karate-canada-nationals-2025/i2.jpg",
+      "/blogs/karate-canada-nationals-2025/i3.jpg",
+      "/blogs/karate-canada-nationals-2025/i4.jpg",
+      "/blogs/karate-canada-nationals-2025/i5.jpg",
+      "/blogs/karate-canada-nationals-2025/i6.jpg",
+      "/blogs/karate-canada-nationals-2025/i7.jpg",
+      "/blogs/karate-canada-nationals-2025/i8.jpg",
+      "/blogs/karate-canada-nationals-2025/i9.jpg",
+    ],
   },
   {
     id: 5,
@@ -59,6 +103,17 @@ export const posts: Post[] = [
     description:
       "Understand the significance of kata in karate training and its role in competitions.",
     slug: "importance-of-kata-in-karate",
+    gallery: [
+      "/blogs/karate-canada-nationals-2025/i1.jpg",
+      "/blogs/karate-canada-nationals-2025/i2.jpg",
+      "/blogs/karate-canada-nationals-2025/i3.jpg",
+      "/blogs/karate-canada-nationals-2025/i4.jpg",
+      "/blogs/karate-canada-nationals-2025/i5.jpg",
+      "/blogs/karate-canada-nationals-2025/i6.jpg",
+      "/blogs/karate-canada-nationals-2025/i7.jpg",
+      "/blogs/karate-canada-nationals-2025/i8.jpg",
+      "/blogs/karate-canada-nationals-2025/i9.jpg",
+    ],
   },
   {
     id: 6,
