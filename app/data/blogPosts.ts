@@ -8,10 +8,6 @@ const blogPosts = [
     description:
       "Discover how mastering the fundamentals can lead to better results in both training and competitions.",
     slug: "mastering-the-basics-of-karate",
-    content: `
-      This is the full content of the blog post. 
-      You can write HTML/JSX-safe strings here, or convert from markdown later if needed.
-    `,
   },
   {
     id: 2,
@@ -22,10 +18,6 @@ const blogPosts = [
     description:
       "Learn about the meaning behind each karate belt and what it takes to move up the ranks.",
     slug: "belt-journey-explained",
-    content: `
-    This is the full content of the blog post. 
-    You can write HTML/JSX-safe strings here, or convert from markdown later if needed.
-  `,
   },
   {
     id: 3,
@@ -36,10 +28,6 @@ const blogPosts = [
     description:
       "Start your karate journey with these essential techniques and mindset tips.",
     slug: "training-techniques-for-beginners",
-    content: `
-    This is the full content of the blog post. 
-    You can write HTML/JSX-safe strings here, or convert from markdown later if needed.
-  `,
   },
   {
     id: 4,
@@ -50,10 +38,6 @@ const blogPosts = [
     description:
       "Enhance your sparring skills with these expert tips and strategies.",
     slug: "karate-sparring-tips",
-    content: `
-    This is the full content of the blog post. 
-    You can write HTML/JSX-safe strings here, or convert from markdown later if needed.
-  `,
   },
   {
     id: 5,
@@ -64,10 +48,6 @@ const blogPosts = [
     description:
       "Understand the significance of kata in karate training and its role in competitions.",
     slug: "importance-of-kata-in-karate",
-    content: `
-    This is the full content of the blog post. 
-    You can write HTML/JSX-safe strings here, or convert from markdown later if needed.
-  `,
   },
 ];
 
