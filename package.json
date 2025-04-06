@@ -1,6 +1,6 @@
 {
   "name": "skif-website",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.2.4",
     "@react-three/drei": "^10.0.5",
     "@react-three/fiber": "^9.1.1",
+    "@types/mdx": "^2.0.13",
     "@types/three": "^0.175.0",
     "framer-motion": "^12.6.2",
     "lucide": "^0.485.0",
@@ -24,6 +28,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
