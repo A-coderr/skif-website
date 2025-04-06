@@ -77,7 +77,7 @@ export default function ScheduleTable() {
       start: 17.5,
       duration: 1,
       name: "Kids",
-      color: "bg-[#d9f4c8] text-black",
+      color: "bg-[#ffe2f0] text-black",
     },
     {
       day: "Tuesday",
@@ -85,7 +85,7 @@ export default function ScheduleTable() {
       start: 18.5,
       duration: 1,
       name: "Intermediate",
-      color: "bg-[#3d4e51] text-white",
+      color: "bg-[#1f2937] text-white",
     },
     {
       day: "Tuesday",
@@ -93,7 +93,7 @@ export default function ScheduleTable() {
       start: 19.5,
       duration: 1.5,
       name: "Adults",
-      color: "bg-[#f6ab71] text-black",
+      color: "bg-[#f87171] text-white",
     },
     {
       day: "Thursday",
@@ -101,7 +101,7 @@ export default function ScheduleTable() {
       start: 17.5,
       duration: 1,
       name: "Kids",
-      color: "bg-[#d9f4c8] text-black",
+      color: "bg-[#ffe2f0] text-black",
     },
     {
       day: "Thursday",
@@ -109,7 +109,7 @@ export default function ScheduleTable() {
       start: 18.5,
       duration: 1,
       name: "Intermediate",
-      color: "bg-[#3d4e51] text-white",
+      color: "bg-[#1f2937] text-white",
     },
     {
       day: "Thursday",
@@ -117,7 +117,7 @@ export default function ScheduleTable() {
       start: 19.5,
       duration: 1.5,
       name: "Adults",
-      color: "bg-[#f6ab71] text-black",
+      color: "bg-[#f87171] text-white",
     },
     {
       day: "Friday",
@@ -125,7 +125,7 @@ export default function ScheduleTable() {
       start: 19.5,
       duration: 1.5,
       name: "Tournament",
-      color: "bg-[#7b5e7b] text-white",
+      color: "bg-[#8b5cf6] text-white",
     },
     {
       day: "Saturday",
@@ -133,7 +133,7 @@ export default function ScheduleTable() {
       start: 12.5,
       duration: 1,
       name: "Kids",
-      color: "bg-[#d9f4c8] text-black",
+      color: "bg-[#ffe2f0] text-black",
     },
     {
       day: "Saturday",
@@ -141,7 +141,7 @@ export default function ScheduleTable() {
       start: 13.5,
       duration: 1,
       name: "Intermediate",
-      color: "bg-[#3d4e51] text-white",
+      color: "bg-[#1f2937] text-white",
     },
     {
       day: "Saturday",
@@ -149,7 +149,7 @@ export default function ScheduleTable() {
       start: 14.5,
       duration: 1.5,
       name: "Adults",
-      color: "bg-[#f6ab71] text-black",
+      color: "bg-[#f87171] text-white",
     },
   ];
 
@@ -179,7 +179,7 @@ export default function ScheduleTable() {
       >
         <div className="w-full text-left mb-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800">
-            Schedule 2024–2025
+            Class Schedule 2024-2025
           </h1>
         </div>
 

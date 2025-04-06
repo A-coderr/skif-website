@@ -17,7 +17,7 @@ export default function BlogPage() {
     <>
       <section
         ref={ref}
-        className="relative h-[40vh] w-full overflow-hidden flex items-center justify-center bg-gray-900 text-white"
+        className="relative h-[30vh] md:h-[40vh] w-full overflow-hidden flex items-center justify-center bg-gray-900 text-white"
       >
         {/* Background Layer */}
         <motion.div
