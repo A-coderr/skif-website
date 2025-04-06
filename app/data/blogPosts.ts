@@ -1,4 +1,14 @@
-const blogPosts = [
+export type Post = {
+  id: number;
+  image: string;
+  date?: string;
+  location?: string;
+  title: string;
+  description?: string;
+  slug: string;
+};
+
+export const posts: Post[] = [
   {
     id: 1,
     image: "/blogs/blog1_placeholder.jpg",
@@ -49,6 +59,13 @@ const blogPosts = [
       "Understand the significance of kata in karate training and its role in competitions.",
     slug: "importance-of-kata-in-karate",
   },
+  {
+    id: 6,
+    image: "/blogs/karate-canada-nationals-2025-thumbnail.jpg",
+    date: "April 2-5, 2025",
+    location: "Vancouver, Canada",
+    title: "Karate Canada Nationals 2025",
+    description: "SKIF Karate Canada at the Karate Canada Nationals 2025.",
+    slug: "karate-canada-nationals-2025",
+  },
 ];
-
-export default blogPosts;

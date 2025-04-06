@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import blogPosts from "../data/blogPosts";
+import { posts as blogPosts } from "../data/blogPosts";
 
 export default function BlogGallery() {
   return (
@@ -15,7 +15,7 @@ export default function BlogGallery() {
         Latest Blog Posts
       </motion.h1>
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {blogPosts.map((post, index) => (
+        {[...blogPosts].reverse().map((post, index) => (
           <motion.div
             key={post.id}
             className="bg-white shadow-md overflow-hidden transition-transform hover:scale-102"
