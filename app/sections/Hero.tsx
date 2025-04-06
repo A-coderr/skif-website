@@ -20,7 +20,7 @@ export default function HeroSection() {
       {/* Background Layer */}
       <motion.div
         style={{ y: translateY2 }}
-        className="absolute inset-0 w-full h-full bg-[url('/hero.jpg')] bg-cover bg-center opacity-30"
+        className="absolute inset-0 w-full h-full bg-[url('/hero.jpg')] bg-cover bg-center opacity-40"
       />
 
       {/* Foreground Layer - Title */}
