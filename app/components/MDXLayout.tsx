@@ -20,8 +20,6 @@ function MDXLayout({ children }: { children: React.ReactNode }) {
   const backgroundImageStyle = {
     backgroundImage: `url('${post?.image || "/images/hero.png"}')`,
   };
-  console.log(post);
-  console.log("Rendering MDXLayout", new Date().toISOString());
   return (
     <>
       <section
