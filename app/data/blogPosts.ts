@@ -135,6 +135,8 @@ export const posts: Post[] = [
       "/blogs/karate-canada-nationals-2025/i8.jpg",
       "/blogs/karate-canada-nationals-2025/i9.jpg",
       "/blogs/karate-canada-nationals-2025/i10.jpg",
+      "/blogs/karate-canada-nationals-2025/i11.jpg",
+      "/blogs/karate-canada-nationals-2025/i12.jpg",
     ],
   },
 ];
