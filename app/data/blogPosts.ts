@@ -119,8 +119,8 @@ export const posts: Post[] = [
     id: 6,
     image:
       "/blogs/karate-canada-nationals-2025/karate-canada-nationals-2025-thumbnail.jpg",
-    date: "April 2-5, 2025",
-    location: "Vancouver, Canada",
+    date: "April 3-6, 2025",
+    location: "Richmond, Canada",
     title: "Karate Canada Nationals 2025",
     description: "SKIF Karate Canada at the Karate Canada Nationals 2025.",
     slug: "karate-canada-nationals-2025",
@@ -134,6 +134,7 @@ export const posts: Post[] = [
       "/blogs/karate-canada-nationals-2025/i7.jpg",
       "/blogs/karate-canada-nationals-2025/i8.jpg",
       "/blogs/karate-canada-nationals-2025/i9.jpg",
+      "/blogs/karate-canada-nationals-2025/i10.jpg",
     ],
   },
 ];
