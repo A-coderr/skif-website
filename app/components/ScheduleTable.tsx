@@ -40,7 +40,7 @@ const Tabs: React.FC<TabsProps> = ({ classes }) => {
         {days.map((day, index) => (
           <button
             key={index}
-            className={`flex-1 min-w-[64px] py-3 px-4 text-base rounded-lg text-center transition-all duration-300
+            className={`flex-1 min-w-[64px] py-3 px-4 text-base text-center transition-all duration-300
     ${
       activeTab === index
         ? "bg-gray-800 text-white font-semibold shadow-lg"
@@ -58,10 +58,7 @@ const Tabs: React.FC<TabsProps> = ({ classes }) => {
       <div className="mt-4">
         <div className="grid grid-cols-1 gap-4">
           {groupedClasses[days[activeTab]].map((classItem, index) => (
-            <div
-              key={index}
-              className={`p-4 rounded-lg shadow-lg ${classItem.color}`}
-            >
+            <div key={index} className={`p-4 shadow-lg ${classItem.color}`}>
               <h3 className="text-xl font-semibold mb-2">{classItem.name}</h3>
               <p>{classItem.time}</p>
             </div>
@@ -80,7 +77,7 @@ export default function ScheduleTable() {
       start: 17.5,
       duration: 1,
       name: "Kids",
-      color: "bg-[#d9f4c8] text-black",
+      color: "bg-[#ffe2f0] text-black",
     },
     {
       day: "Tuesday",
@@ -88,7 +85,7 @@ export default function ScheduleTable() {
       start: 18.5,
       duration: 1,
       name: "Intermediate",
-      color: "bg-[#3d4e51] text-white",
+      color: "bg-[#1f2937] text-white",
     },
     {
       day: "Tuesday",
@@ -96,7 +93,7 @@ export default function ScheduleTable() {
       start: 19.5,
       duration: 1.5,
       name: "Adults",
-      color: "bg-[#f6ab71] text-black",
+      color: "bg-[#f87171] text-white",
     },
     {
       day: "Thursday",
@@ -104,7 +101,7 @@ export default function ScheduleTable() {
       start: 17.5,
       duration: 1,
       name: "Kids",
-      color: "bg-[#d9f4c8] text-black",
+      color: "bg-[#ffe2f0] text-black",
     },
     {
       day: "Thursday",
@@ -112,7 +109,7 @@ export default function ScheduleTable() {
       start: 18.5,
       duration: 1,
       name: "Intermediate",
-      color: "bg-[#3d4e51] text-white",
+      color: "bg-[#1f2937] text-white",
     },
     {
       day: "Thursday",
@@ -120,7 +117,7 @@ export default function ScheduleTable() {
       start: 19.5,
       duration: 1.5,
       name: "Adults",
-      color: "bg-[#f6ab71] text-black",
+      color: "bg-[#f87171] text-white",
     },
     {
       day: "Friday",
@@ -128,7 +125,7 @@ export default function ScheduleTable() {
       start: 19.5,
       duration: 1.5,
       name: "Tournament",
-      color: "bg-[#7b5e7b] text-white",
+      color: "bg-[#8b5cf6] text-white",
     },
     {
       day: "Saturday",
@@ -136,7 +133,7 @@ export default function ScheduleTable() {
       start: 12.5,
       duration: 1,
       name: "Kids",
-      color: "bg-[#d9f4c8] text-black",
+      color: "bg-[#ffe2f0] text-black",
     },
     {
       day: "Saturday",
@@ -144,7 +141,7 @@ export default function ScheduleTable() {
       start: 13.5,
       duration: 1,
       name: "Intermediate",
-      color: "bg-[#3d4e51] text-white",
+      color: "bg-[#1f2937] text-white",
     },
     {
       day: "Saturday",
@@ -152,7 +149,7 @@ export default function ScheduleTable() {
       start: 14.5,
       duration: 1.5,
       name: "Adults",
-      color: "bg-[#f6ab71] text-black",
+      color: "bg-[#f87171] text-white",
     },
   ];
 
@@ -182,7 +179,7 @@ export default function ScheduleTable() {
       >
         <div className="w-full text-left mb-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800">
-            Schedule 2024–2025
+            Class Schedule 2024-2025
           </h1>
         </div>
 
@@ -253,7 +250,7 @@ export default function ScheduleTable() {
                       .map((cls) => (
                         <div
                           key={cls.name}
-                          className={`absolute left-0 right-0 shadow-md ${cls.color} rounded-md p-2`}
+                          className={`absolute left-0 right-0 shadow-md ${cls.color} p-2`}
                           style={{
                             top: `${(cls.start - 12) * 40 * 2}px`,
                             height: `${cls.duration * 40 * 2}px`,
