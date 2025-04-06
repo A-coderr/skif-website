@@ -36,7 +36,6 @@ export default function InstructorsHome() {
 
               <motion.a
                 href="/instructors"
-                whileHover={{ scale: 1.05 }}
                 className="relative inline-block px-5 py-2 text-sm font-medium text-black border border-black group overflow-hidden mt-2 self-start"
               >
                 <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
