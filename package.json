@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.2.4",
     "@react-three/drei": "^10.0.5",
     "@react-three/fiber": "^9.1.1",
+    "@types/mdx": "^2.0.13",
     "@types/three": "^0.175.0",
     "framer-motion": "^12.6.2",
     "lucide": "^0.485.0",
