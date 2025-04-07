@@ -20,17 +20,12 @@ export default function BlogGallery() {
             key={post.id}
             className="bg-white shadow-md overflow-hidden transition-transform hover:scale-102"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
           >
             <div className="relative w-full h-48">
-              <Image
-                src={post.image}
-                alt={post.title}
-                layout="fill"
-                objectFit="cover"
-                priority
-              />
+              <Image src={post.image} alt={post.title} fill priority />
             </div>
             <div className="p-6">
               <p className="text-sm text-gray-500 mb-1">
