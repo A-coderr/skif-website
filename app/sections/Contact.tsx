@@ -42,7 +42,7 @@ const Contact = () => {
           <div className="flex items-center space-x-3">
             <FaPhoneAlt className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-gray-600 flex-shrink-0" />
             <p className="text-xs sm:text-base md:text-md lg:text-lg truncate">
-              <strong>(905) 275-9395</strong>
+              <strong>(905) 815-7563</strong>
             </p>
           </div>
         </motion.div>
