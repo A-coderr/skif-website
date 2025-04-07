@@ -18,7 +18,7 @@ export default function BlogGallery() {
         {[...blogPosts].reverse().map((post, index) => (
           <motion.div
             key={post.id}
-            className="bg-white shadow-md overflow-hidden transition-transform hover:scale-102"
+            className="bg-white shadow-md overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
