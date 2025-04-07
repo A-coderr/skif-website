@@ -172,14 +172,14 @@ export default function ScheduleTable() {
   return (
     <section className="w-full min-h-[60vh] flex justify-center p-6">
       <div className="flex flex-col w-full max-w-7xl justify-start">
-        <div className="w-full text-left mb-6">
+        <div className="w-full text-left">
           <motion.h1
             className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800"
             initial={{ opacity: 0, y: -20 }} //Initial position and opacity.
             animate={{ opacity: 1, y: 0 }} //Final position and opacity.
             transition={{ duration: 0.6 }} //Animation duration.
           >
-            Latest Blog Posts
+            Class Schedule 2024-2025
           </motion.h1>
         </div>
 
