@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Exo_2, Alegreya_Sans } from "next/font/google";
 import "./globals.css";
 import NavMenu from "./components/NavMenu";
 import Footer from "./sections/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const exo2 = Exo_2({
+  variable: "--font-exo-2",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const alegreyaSans = Alegreya_Sans({
+  variable: "--font-alegreya-sans",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -26,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${exo2.variable} ${alegreyaSans.variable} antialiased`}>
         <NavMenu />
         {children}
         <Footer />

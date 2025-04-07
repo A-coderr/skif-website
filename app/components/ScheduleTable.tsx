@@ -171,16 +171,16 @@ export default function ScheduleTable() {
 
   return (
     <section className="w-full min-h-[60vh] flex justify-center p-6">
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="flex flex-col w-full max-w-7xl justify-start"
-      >
-        <div className="w-full text-left mb-6">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800">
+      <div className="flex flex-col w-full max-w-7xl justify-start">
+        <div className="w-full text-left">
+          <motion.h1
+            className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800"
+            initial={{ opacity: 0, y: -20 }} //Initial position and opacity.
+            animate={{ opacity: 1, y: 0 }} //Final position and opacity.
+            transition={{ duration: 0.6 }} //Animation duration.
+          >
             Class Schedule 2024-2025
-          </h1>
+          </motion.h1>
         </div>
 
         {/* Mobile Grid Layout */}
@@ -201,7 +201,7 @@ export default function ScheduleTable() {
               {timeSlots.map((hour) => (
                 <motion.div
                   key={hour}
-                  initial={{ opacity: 0, x: -10 }}
+                  initial={{ opacity: 0, x: 10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.2, delay: hour * 0.04 }}
                   className="h-20 border justify-center items-center border-[#f9f9f9] flex bg-[#f9f9f9] text-xs md:text-sm"
@@ -270,7 +270,7 @@ export default function ScheduleTable() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

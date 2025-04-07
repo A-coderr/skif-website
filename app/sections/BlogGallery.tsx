@@ -8,9 +8,9 @@ export default function BlogGallery() {
     <section className="max-w-7xl mx-auto px-4 py-6">
       <motion.h1
         className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800"
-        initial={{ opacity: 0, y: -20 }} //Initial position and opacity
-        animate={{ opacity: 1, y: 0 }} //Final position and opacity
-        transition={{ duration: 0.6 }} //Animation duration
+        initial={{ opacity: 0, y: -20 }} //Initial position and opacity.
+        animate={{ opacity: 1, y: 0 }} //Final position and opacity.
+        transition={{ duration: 0.6 }} //Animation duration.
       >
         Latest Blog Posts
       </motion.h1>
@@ -18,19 +18,14 @@ export default function BlogGallery() {
         {[...blogPosts].reverse().map((post, index) => (
           <motion.div
             key={post.id}
-            className="bg-white shadow-md overflow-hidden transition-transform hover:scale-102"
+            className="bg-white shadow-md overflow-hidden"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
           >
             <div className="relative w-full h-48">
-              <Image
-                src={post.image}
-                alt={post.title}
-                layout="fill"
-                objectFit="cover"
-                priority
-              />
+              <Image src={post.image} alt={post.title} fill priority />
             </div>
             <div className="p-6">
               <p className="text-sm text-gray-500 mb-1">
