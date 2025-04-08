@@ -9,12 +9,15 @@ export default function AboutUsSection() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <p className="text-sm uppercase text-red-600 tracking-widest mb-2">
+          <p className="text-sm uppercase text-red-600 tracking-widest mb-8">
             About Us
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-            Empowering Students Through Karate
-          </h2>
+          <div className="mb-8 relative inline-block border-[#B71C1C] lg:border-b-0 lg:border-l-4 lg:pl-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center lg:text-left">
+              Your Karate Journey Starts Here
+            </h2>
+            <div className="absolute bottom-[-10px] left-1/4 w-1/2 border-b-2 lg:border-b-0 border-[#B71C1C]"></div>
+          </div>
           <p className="text-gray-700 mb-4">
             We offer karate programs tailored to students of all ages and skill
             levels. In our safe and friendly environment, multiple instructors
@@ -23,9 +26,10 @@ export default function AboutUsSection() {
             private classes.
           </p>
           <p className="text-gray-700 mb-6">
-            Additionally, students have the opportunity to participate in
-            seminars led by various karate sensei, providing a deeper
-            exploration of their karate journey.
+            Our curriculum emphasizes the core components of traditional
+            Shotokan Karate — kihon (fundamentals), kata (forms), and kumite
+            (sparring) — to build a strong foundation in both technique and
+            discipline.
           </p>
         </div>
 
