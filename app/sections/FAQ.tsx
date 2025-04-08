@@ -20,10 +20,7 @@ export default function FAQ() {
 
         <div className="space-y-6">
           {faqData.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-gray-300 rounded-md bg-white overflow-hidden"
-            >
+            <div key={index} className="bg-white overflow-hidden">
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full text-left px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#B71C1C] flex justify-between items-center"
