@@ -2,18 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { posts as blogPosts } from "../data/blogPosts";
+import Title from "../components/Title";
 
 export default function BlogGallery() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-6">
-      <motion.h1
-        className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800"
-        initial={{ opacity: 0, y: -20 }} //Initial position and opacity.
-        animate={{ opacity: 1, y: 0 }} //Final position and opacity.
-        transition={{ duration: 0.6 }} //Animation duration.
-      >
-        Latest Blog Posts
-      </motion.h1>
+      <Title text="Latest Blog Posts" />
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {[...blogPosts].reverse().map((post, index) => (
           <motion.div
