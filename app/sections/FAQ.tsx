@@ -12,9 +12,9 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-gray-50 py-16 px-6">
+    <section className="bg-[#a7c7e7] py-16 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">
           Frequently Asked Questions
         </h2>
 
