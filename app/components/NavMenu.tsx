@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full gap-30 bg-white shadow-md flex md:justify-center justify-between items-center p-2 md:px-10 z-10"
+      className="fixed top-0 left-0 w-full gap-30 bg-white shadow-md flex md:justify-center justify-between items-center p-2 md:px-10 z-20"
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
