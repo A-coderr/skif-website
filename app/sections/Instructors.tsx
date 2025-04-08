@@ -1,18 +1,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { instructors } from "../data/instructors";
+import Title from "../components/Title";
 
 export default function Instructors() {
   return (
     <section className="w-full px-6 pt-6 pb-16 max-w-7xl mx-auto">
-      <motion.h1
-        initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800"
-      >
-        Meet Our Instructors
-      </motion.h1>
+      <Title text="Meet Our Instructors" />
 
       <div className="space-y-24">
         {instructors.map((instructor, idx) => {

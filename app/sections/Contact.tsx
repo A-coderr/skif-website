@@ -1,18 +1,12 @@
 import React from "react";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Title from "../components/Title";
 
 const Contact = () => {
   return (
     <section className="w-full px-6 pt-6 pb-16 max-w-7xl mx-auto text-gray-800">
-      <motion.h1
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800"
-        initial={{ opacity: 0, y: -20 }} //Initial position and opacity
-        animate={{ opacity: 1, y: 0 }} //Final position and opacity
-        transition={{ duration: 0.6 }} //Animation duration
-      >
-        Contact Us
-      </motion.h1>
+      <Title text="Contact Us" />
 
       <div className="flex flex-col md:flex-row justify-between items-center py-6">
         {/* Left Side */}

@@ -1,42 +1,21 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import React from "react";
 import { Post, posts } from "../data/blogPosts";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Masonry from "react-masonry-css";
+import Banner from "./Banner";
 
 function MDXLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname().split("/")[2];
   const post = posts.find((p: Post) => p.slug === pathname);
 
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const translateY2 = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
-
-  const backgroundImageStyle = {
-    backgroundImage: `url('${post?.image || "/hero.png"}')`,
-  };
-
   if (!post) return null; // Return null if post is undefined
 
   return (
     <>
-      <section
-        ref={ref}
-        className="relative h-[30vh] md:h-[40vh] w-full overflow-hidden flex items-center justify-center bg-gray-900 text-white"
-      >
-        {/* Background Layer */}
-        <motion.div
-          style={{ ...backgroundImageStyle, y: translateY2 }}
-          className="absolute inset-0 w-full h-full bg-cover bg-center opacity-20"
-        />
-      </section>
+      <Banner imageUrl={`${post?.image || "/hero.png"}`} />
       <div className="max-w-7xl mx-auto px-4 py-20 prose">{children}</div>
       {post.gallery?.length > 0 && (
         <section className="max-w-7xl mx-auto px-4 pb-20">
