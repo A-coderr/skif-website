@@ -78,7 +78,7 @@ export default function ScheduleTable() {
       start: 17.5,
       duration: 1,
       name: "Kids",
-      color: "bg-[#ffe2f0] text-black",
+      color: "bg-[#d1fae5] text-black",
     },
     {
       day: "Tuesday",
@@ -102,7 +102,7 @@ export default function ScheduleTable() {
       start: 17.5,
       duration: 1,
       name: "Kids",
-      color: "bg-[#ffe2f0] text-black",
+      color: "bg-[#d1fae5] text-black",
     },
     {
       day: "Thursday",
@@ -134,7 +134,7 @@ export default function ScheduleTable() {
       start: 12.5,
       duration: 1,
       name: "Kids",
-      color: "bg-[#ffe2f0] text-black",
+      color: "bg-[#d1fae5] text-black",
     },
     {
       day: "Saturday",
