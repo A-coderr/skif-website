@@ -23,19 +23,36 @@ export default function Instructors() {
                 isEven ? "" : "md:flex-row-reverse"
               } gap-12 items-center`}
             >
-              <motion.div
-                whileHover={{ scale: 1.03 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="w-full md:w-1/2"
-              >
-                <Image
-                  src={instructor.image}
-                  alt={instructor.name}
-                  width={800}
-                  height={500}
-                  className="w-full h-auto object-cover shadow-lg"
+              {/* Image + Red Square */}
+              <div className="w-full md:w-1/2 flex justify-center relative">
+                {/* Red Square Background */}
+                <motion.div
+                  initial={{ opacity: 0.6, x: isEven ? -40 : 40 }}
+                  whileInView={{ opacity: 0.6, x: 0 }}
+                  transition={{ duration: 0.6, delay: idx * 0.2 }}
+                  viewport={{ once: true }}
+                  className="absolute top-15 left-2 w-[80%] h-[90%] bg-[#B71C1C] z-0"
                 />
-              </motion.div>
+
+                {/* Instructor Image */}
+                <motion.div
+                  initial={{ opacity: 1, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: idx * 0.3 }}
+                  viewport={{ once: true }}
+                  className="relative z-10 w-full md:w-2/3"
+                >
+                  <Image
+                    src={instructor.image}
+                    alt={instructor.name}
+                    width={500}
+                    height={250}
+                    className="w-full h-auto object-cover shadow-lg"
+                  />
+                </motion.div>
+              </div>
+
+              {/* Instructor Text */}
               <div className="w-full md:w-1/2 text-left">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {instructor.name}
