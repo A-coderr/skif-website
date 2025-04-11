@@ -34,23 +34,35 @@ export default function AboutUsSection() {
         </div>
 
         {/* Image */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="w-full max-w-md mx-auto lg:max-w-full lg:w-1/2"
-        >
-          <div className="relative shadow-2xl overflow-hidden">
-            <Image
-              src="/hero.jpg"
-              alt="Karate students training"
-              width={800}
-              height={600}
-              className="object-cover w-full h-full"
+        <div className="w-full max-w-md mx-auto lg:max-w-full lg:w-1/2">
+          <div className="relative w-full h-full">
+            {/* Red Square Animation */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 0.6, x: 0 }}
+              transition={{ duration: 1, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="absolute top-4 md:top-10 left-8 w-[50%] h-full bg-[#B71C1C] z-0 opacity-60"
             />
+
+            {/* Image Animation */}
+            <motion.div
+              initial={{ opacity: 1, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="relative shadow-2xl overflow-hidden z-10"
+            >
+              <Image
+                src="/hero.jpg"
+                alt="Karate students training"
+                width={800}
+                height={600}
+                className="object-cover w-full h-full"
+              />
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
