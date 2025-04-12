@@ -5,6 +5,17 @@ import Image from "next/image";
 import { instructors } from "../data/instructors";
 import { motion } from "framer-motion";
 
+/**
+ * Renders the InstructorsHome section showcasing the instructors.
+ *
+ * This component displays a list of instructors in a grid format,
+ * with each instructor's image, name, and a "Learn More" link.
+ * The section is styled with a background and text color, and includes
+ * animation effects for a smooth appearance.
+ *
+ * @returns {JSX.Element} A section element containing instructor information.
+ */
+
 export default function InstructorsHome() {
   return (
     <section id="instructors" className="py-16 px-4 bg-gray-300 text-black">

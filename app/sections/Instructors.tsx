@@ -3,6 +3,14 @@ import { motion } from "framer-motion";
 import { instructors } from "../data/instructors";
 import Title from "../components/Title";
 
+/**
+ * Renders the Instructors section, displaying a list of instructors with
+ * their names, titles, bios, and images. The section is styled with a
+ * background and text color, and includes animation effects for a smooth
+ * appearance.
+ *
+ * @returns {JSX.Element} A section element containing instructor information.
+ */
 export default function Instructors() {
   return (
     <section className="w-full px-6 pt-6 pb-16 max-w-7xl mx-auto">
@@ -23,7 +31,6 @@ export default function Instructors() {
                 isEven ? "" : "md:flex-row-reverse"
               } gap-12 items-center`}
             >
-              {/* Image + Red Square */}
               <div className="w-full md:w-1/2 flex justify-center relative">
                 {/* Red Square Background */}
                 <motion.div
