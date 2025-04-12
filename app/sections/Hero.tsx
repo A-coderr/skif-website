@@ -3,6 +3,14 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
+/**
+ * The HeroSection component renders a section with a background image that
+ * fades in on scroll. The foreground layer contains a heading, a paragraph
+ * and a link to the contact page. The components are animated to fade in
+ * and translate on scroll.
+ *
+ * @returns {JSX.Element} The HeroSection component.
+ */
 export default function HeroSection() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -23,7 +31,7 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full bg-[url('/hero.jpg')] bg-cover bg-center opacity-40"
       />
 
-      {/* Foreground Layer - Title */}
+      {/* Foreground Layer */}
       <div className=" flex flex-col items-center justify-center relative text-center">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
