@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Title from "./Title";
-// Type definitions for the classes
+import { classes, days } from "../data/schedule";
+
 type Class = {
   day: string;
   time: string;
@@ -15,10 +16,16 @@ type TabsProps = {
   classes: Class[];
 };
 
+/**
+ * Tabs component for displaying classes grouped by day
+ * @param {TabsProps} props
+ * @prop {Class[]} classes - array of classes to display
+ * @returns {JSX.Element} - Tabs component
+ */
 const Tabs: React.FC<TabsProps> = ({ classes }) => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
-  // Group classes by day
+  //Group classes by day to display in tabs
   const groupedClasses = classes.reduce(
     (acc: Record<string, Class[]>, curr) => {
       if (!acc[curr.day]) {
@@ -70,98 +77,21 @@ const Tabs: React.FC<TabsProps> = ({ classes }) => {
   );
 };
 
+/**
+ * Class schedule component for mobile and desktop layouts
+ *
+ * @returns {JSX.Element} - Schedule component
+ * @description
+ *   The component displays the class schedule for mobile and desktop layouts.
+ *   It renders a tabs component for mobile layout, and a grid component with
+ *   time slots and days for desktop layout.
+ *   The grid component renders a column for each day, and a row for each time
+ *   slot. The classes are rendered as absolute positioned elements within the
+ *   grid cells, with the top and height styles set based on the start and
+ *   duration of each class.
+ *   The component also renders a title and a separator above the schedule.
+ */
 export default function ScheduleTable() {
-  const classes = [
-    {
-      day: "Tuesday",
-      time: "5:30 pm - 6:30 pm",
-      start: 17.5,
-      duration: 1,
-      name: "Kids",
-      color: "bg-[#d1fae5] text-black",
-    },
-    {
-      day: "Tuesday",
-      time: "6:30 pm - 7:30 pm",
-      start: 18.5,
-      duration: 1,
-      name: "Intermediate",
-      color: "bg-[#1f2937] text-white",
-    },
-    {
-      day: "Tuesday",
-      time: "7:30 pm - 9:00 pm",
-      start: 19.5,
-      duration: 1.5,
-      name: "Adults",
-      color: "bg-[#f87171] text-white",
-    },
-    {
-      day: "Thursday",
-      time: "5:30 pm - 6:30 pm",
-      start: 17.5,
-      duration: 1,
-      name: "Kids",
-      color: "bg-[#d1fae5] text-black",
-    },
-    {
-      day: "Thursday",
-      time: "6:30 pm - 7:30 pm",
-      start: 18.5,
-      duration: 1,
-      name: "Intermediate",
-      color: "bg-[#1f2937] text-white",
-    },
-    {
-      day: "Thursday",
-      time: "7:30 pm - 9:00 pm",
-      start: 19.5,
-      duration: 1.5,
-      name: "Adults",
-      color: "bg-[#f87171] text-white",
-    },
-    {
-      day: "Friday",
-      time: "7:30 pm - 9:00 pm",
-      start: 19.5,
-      duration: 1.5,
-      name: "Tournament",
-      color: "bg-[#8b5cf6] text-white",
-    },
-    {
-      day: "Saturday",
-      time: "12:30 pm - 1:30 pm",
-      start: 12.5,
-      duration: 1,
-      name: "Kids",
-      color: "bg-[#d1fae5] text-black",
-    },
-    {
-      day: "Saturday",
-      time: "1:30 pm - 2:30 pm",
-      start: 13.5,
-      duration: 1,
-      name: "Intermediate",
-      color: "bg-[#1f2937] text-white",
-    },
-    {
-      day: "Saturday",
-      time: "2:30 pm - 4:00 pm",
-      start: 14.5,
-      duration: 1.5,
-      name: "Adults",
-      color: "bg-[#f87171] text-white",
-    },
-  ];
-
-  const days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
   const timeSlots = Array.from({ length: 10 }, (_, i) => i + 12); // 12 PM to 9 PM
 
   const formatTime = (hour: number) => {
@@ -175,7 +105,7 @@ export default function ScheduleTable() {
       <div className="flex flex-col w-full max-w-7xl justify-start">
         <Title text="Class Schedule 2024-2025" />
 
-        {/* Mobile Grid Layout */}
+        {/* Mobile Layout */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -185,7 +115,7 @@ export default function ScheduleTable() {
           <Tabs classes={classes} />
         </motion.div>
 
-        {/* Desktop Table Layout */}
+        {/* Desktop Layout */}
         <div className="hidden md:block w-full">
           <div className="w-full flex flex-col md:flex-row justify-center">
             {/* Time Column */}
