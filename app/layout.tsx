@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Exo_2, Alegreya_Sans } from "next/font/google";
 import "./globals.css";
-import NavMenu from "./components/NavMenu";
 import Footer from "./sections/Footer";
+import InfoBanner from "./components/InfoBanner";
+import NavMenu from "./components/NavMenu";
+import { BannerProvider } from "./context/BannerProvider";
 
 const exo2 = Exo_2({
   variable: "--font-exo-2",
@@ -28,9 +30,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${exo2.variable} ${alegreyaSans.variable} antialiased`}>
-        <NavMenu />
-        {children}
-        <Footer />
+        <BannerProvider>
+          <InfoBanner />
+          <NavMenu />
+          {children}
+          <Footer />
+        </BannerProvider>
       </body>
     </html>
   );
