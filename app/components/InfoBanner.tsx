@@ -25,15 +25,15 @@ export default function InfoBanner() {
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex justify-between items-center w-full">
-        <span>
+      <div className="flex justify-between items-center w-full h-full">
+        <span className="flex items-center">
           <FaMapMarkerAlt className="inline mr-2" /> 2233 Hurontario St,
           Mississauga
         </span>
-        <span className="text-center">
+        <span className="flex items-center text-center">
           <FaEnvelope className="inline mr-2" /> skiftorontokaratedo@hotmail.com
         </span>
-        <span>
+        <span className="flex items-center">
           <FaPhoneAlt className="inline mr-2" /> (905) 815-7563
         </span>
       </div>
