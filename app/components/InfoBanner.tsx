@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function InfoBanner() {
   const [visible, setVisible] = useState(true);
@@ -24,7 +25,18 @@ export default function InfoBanner() {
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      📍 123 Dojo Street, City | 📞 (123) 456-7890
+      <div className="flex justify-between items-center w-full">
+        <span>
+          <FaMapMarkerAlt className="inline mr-2" /> 2233 Hurontario St,
+          Mississauga
+        </span>
+        <span className="text-center">
+          <FaEnvelope className="inline mr-2" /> skiftorontokaratedo@hotmail.com
+        </span>
+        <span>
+          <FaPhoneAlt className="inline mr-2" /> (905) 815-7563
+        </span>
+      </div>
     </div>
   );
 }
