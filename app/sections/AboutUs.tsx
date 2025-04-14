@@ -9,7 +9,7 @@ export default function AboutUsSection() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <p className="text-sm uppercase text-[#B71C1C] tracking-widest mb-8">
+          <p className="text-md uppercase text-[#B71C1C] tracking-widest mb-8">
             About Us
           </p>
           <div className="mb-8 relative inline-block border-[#B71C1C] lg:border-b-0 lg:border-l-4 lg:pl-4">
