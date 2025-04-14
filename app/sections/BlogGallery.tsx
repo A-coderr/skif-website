@@ -2,12 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { posts as blogPosts } from "../data/blogPosts";
-import Title from "../components/Title";
 
 export default function BlogGallery() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-6">
-      <Title text="Latest Blog Posts" />
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {[...blogPosts].reverse().map((post, index) => (
           <motion.div

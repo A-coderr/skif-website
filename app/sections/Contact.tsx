@@ -1,13 +1,10 @@
 import React from "react";
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Title from "../components/Title";
 
 const Contact = () => {
   return (
     <section className="w-full px-6 pt-6 pb-16 max-w-7xl mx-auto text-gray-800">
-      <Title text="Contact Us" />
-
       <div className="flex flex-col md:flex-row justify-between items-center py-6">
         {/* Left Side */}
         <motion.div

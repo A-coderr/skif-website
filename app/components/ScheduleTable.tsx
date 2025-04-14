@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Title from "./Title";
 import { classes, days } from "../data/schedule";
 
 type Class = {
@@ -103,8 +102,6 @@ export default function ScheduleTable() {
   return (
     <section className="w-full min-h-[60vh] flex justify-center p-6">
       <div className="flex flex-col w-full max-w-7xl justify-start">
-        <Title text="Class Schedule 2024-2025" />
-
         {/* Mobile Layout */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

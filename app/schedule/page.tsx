@@ -7,7 +7,7 @@ import Banner from "../components/Banner";
 export default function SchedulePage() {
   return (
     <>
-      <Banner imageUrl="/karate.jpg" />
+      <Banner imageUrl="/karate.jpg" title="Schedule" />
       <ScheduleTable />
     </>
   );
