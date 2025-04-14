@@ -6,10 +6,10 @@ import Title from "./Title";
 
 type BannerProps = {
   imageUrl: string;
-  title: string;
+  title?: string;
 };
 
-const Banner = ({ imageUrl, title }: BannerProps) => {
+const Banner = ({ imageUrl, title = "" }: BannerProps) => {
   const ref = useRef<HTMLElement | null>(null);
 
   const { scrollYProgress } = useScroll({
