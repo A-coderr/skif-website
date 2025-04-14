@@ -22,7 +22,7 @@ const Banner = ({ imageUrl, title = "" }: BannerProps) => {
   return (
     <section
       ref={ref}
-      className="relative h-[40vh] md:h-[50vh] w-full overflow-hidden flex items-center justify-center bg-gray-900"
+      className="relative h-[30vh] md:h-[50vh] w-full overflow-hidden flex items-center justify-center bg-gray-900"
     >
       <motion.div
         style={{
@@ -32,9 +32,11 @@ const Banner = ({ imageUrl, title = "" }: BannerProps) => {
         className="absolute inset-0 w-full h-full bg-cover bg-center opacity-20"
       />
       {/* Title overlay */}
-      <div className="z-10 px-4">
-        <Title text={title} align="left" />
-      </div>
+      {title !== "" && (
+        <div className="z-10 px-4">
+          <Title text={title} align="left" />
+        </div>
+      )}
     </section>
   );
 };

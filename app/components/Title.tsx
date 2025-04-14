@@ -22,7 +22,7 @@ const alignmentMap: Record<NonNullable<TitleProps["align"]>, string> = {
  * @param {"left" | "center" | "right"} [props.align="left"] - The alignment of the title.
  * @returns {JSX.Element} The rendered title component.
  */
-const Title = ({ text, align = "left" }: TitleProps) => {
+const Title = ({ text = "", align = "left" }: TitleProps) => {
   return (
     <div
       className={`w-full ${alignmentMap[align]} relative inline-flex items-center pl-2 md:pl-4 py-2 my-6 md:my-10`}
