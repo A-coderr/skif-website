@@ -22,7 +22,7 @@ const Banner = ({ imageUrl, title = "" }: BannerProps) => {
   return (
     <section
       ref={ref}
-      className="relative h-[30vh] md:h-[50vh] w-full overflow-hidden flex items-center justify-center bg-gray-900"
+      className="relative mt-20 md:mt-30 h-[30vh] md:h-[40vh] w-full overflow-hidden flex items-center justify-center bg-gray-900"
     >
       <motion.div
         style={{
