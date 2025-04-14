@@ -33,7 +33,7 @@ export default function FAQ() {
                 onClick={() => toggleFAQ(index)}
                 className={`w-full text-left px-6 py-4 flex justify-between items-center ${
                   activeIndex === index
-                    ? "border-b-2 border-[#B71C1C] bg-[#fff3f3]"
+                    ? "border-b-2 border-[#B71C1C] bg-gray-200"
                     : ""
                 }`}
               >
