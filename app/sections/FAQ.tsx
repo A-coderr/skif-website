@@ -23,7 +23,9 @@ export default function FAQ() {
             <div key={index} className="bg-white overflow-hidden">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#B71C1C] flex justify-between items-center"
+                className={`w-full text-left px-6 py-4 flex justify-between items-center ${
+                  activeIndex === index ? "border-b-2 border-[#B71C1C]" : ""
+                }`}
               >
                 <span className="text-lg font-medium text-gray-800">
                   {faq.question}
