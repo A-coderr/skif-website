@@ -15,7 +15,7 @@ const Contact = () => {
         >
           {/* Location */}
           <div className="flex items-center space-x-3">
-            <FaMapMarkerAlt className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-gray-600 flex-shrink-0" />
+            <FaMapMarkerAlt className="h-6 w-6 text-[#B71C1C] flex-shrink-0" />
             <p className="text-xs sm:text-base md:text-md lg:text-lg truncate">
               <strong>2233 Hurontario St, Mississauga, ON L5A 2E9</strong>
             </p>
@@ -23,7 +23,7 @@ const Contact = () => {
 
           {/* Email */}
           <div className="flex items-center space-x-3">
-            <FaEnvelope className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-gray-600 flex-shrink-0" />
+            <FaEnvelope className="h-6 w-6 text-[#B71C1C] flex-shrink-0" />
             <p className="text-xs sm:text-base md:text-md lg:text-lg truncate">
               <strong>skiftorontokaratedo@hotmail.com</strong>
             </p>
@@ -31,7 +31,7 @@ const Contact = () => {
 
           {/* Phone */}
           <div className="flex items-center space-x-3">
-            <FaPhoneAlt className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-gray-600 flex-shrink-0" />
+            <FaPhoneAlt className="h-6 w-6 text-[#B71C1C] flex-shrink-0" />
             <p className="text-xs sm:text-base md:text-md lg:text-lg truncate">
               <strong>(905) 815-7563</strong>
             </p>
