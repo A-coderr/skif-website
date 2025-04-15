@@ -14,7 +14,7 @@ export default function ClassesOfferedSection() {
         className="max-w-7xl mx-auto text-center border-t-2 border-gray-100 pt-12"
       >
         <p className="text-md uppercase text-[#B71C1C] tracking-widest mb-4">
-          Classes Offered
+          Choose the Class
         </p>
 
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-6">
@@ -30,7 +30,7 @@ export default function ClassesOfferedSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-gray-700">
           {/* Beginners */}
           <div className="flex flex-col items-center space-y-4">
-            <FaChild size={40} className="text-[#B71C1C]" />
+            <FaChild size={30} className="text-[#B71C1C]" />
             <h3 className="text-xl font-semibold">Beginners</h3>
             <p className="text-md text-center max-w-xs">
               Ages 4+ — Learn the basics of karate in a fun, supportive setting.
@@ -39,7 +39,7 @@ export default function ClassesOfferedSection() {
 
           {/* Intermediate */}
           <div className="flex flex-col items-center space-y-4">
-            <FaUser size={40} className="text-[#B71C1C]" />
+            <FaUser size={30} className="text-[#B71C1C]" />
             <h3 className="text-xl font-semibold">Intermediate</h3>
             <p className="text-md text-center max-w-xs">
               Build on foundational skills with more advanced forms and
@@ -49,7 +49,7 @@ export default function ClassesOfferedSection() {
 
           {/* Advanced & Black Belts */}
           <div className="flex flex-col items-center space-y-4">
-            <FaUserGraduate size={40} className="text-[#B71C1C]" />
+            <FaUserGraduate size={30} className="text-[#B71C1C]" />
             <h3 className="text-xl font-semibold">Advanced & Black Belts</h3>
             <p className="text-md text-center max-w-xs">
               Focus on high-level techniques, precision kata, and leadership in
