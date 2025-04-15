@@ -10,7 +10,7 @@ export default function AboutUsSection() {
         {/* Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <p className="text-md uppercase text-[#B71C1C] tracking-widest mb-8">
-            About Us
+            Welcome
           </p>
           <div className="mb-8 relative inline-block border-[#B71C1C] lg:border-b-0 lg:border-l-4 lg:pl-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center lg:text-left">
