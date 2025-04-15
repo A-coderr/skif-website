@@ -18,13 +18,23 @@ import { motion } from "framer-motion";
 
 export default function InstructorsHome() {
   return (
-    <section id="instructors" className="py-16 px-4 bg-gray-300 text-black">
-      <div className="w-full max-w-7xl mx-auto text-left mb-6">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800">
+    <section id="instructors" className="py-16 px-4 bg-gray-900 text-gray-300">
+      <div className="w-full max-w-4xl mx-auto text-center mb-12">
+        <p className="text-md text-center uppercase text-[#B71C1C] tracking-widest mb-6">
+          Instructors
+        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-6">
           Meet Our Instructors
-        </h1>
+        </h2>
+        <p className="text-center text-gray-500 text-md mb-8 md:max-w-2/3 mx-auto">
+          Our dedicated instructors bring years of experience, passion, and
+          discipline to every class. Whether you&apos;re a beginner or advancing
+          through the ranks, they are here to guide, motivate, and help you grow
+          both in skill and confidence.
+        </p>
       </div>
 
+      {/* Grid layout remains similar, adjusted max-width if needed */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {instructors.map((instructor, idx) => (
           <motion.div
@@ -33,27 +43,24 @@ export default function InstructorsHome() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: idx * 0.2 }}
             viewport={{ once: true }}
-            className="border border-gray-300 shadow-lg bg-white flex flex-col"
+            // Added rounded corners, changed background, removed border, kept shadow
+            className="shadow-lg bg-white text-gray-900 flex flex-col overflow-hidden"
           >
-            <Image
-              src={instructor.image}
-              alt={instructor.name}
-              width={400}
-              height={300}
-              className="w-full h-64 object-cover object-top"
-            />
-            <div className="p-5 flex flex-col flex-grow">
-              <h3 className="text-xl font-semibold mb-4">{instructor.name}</h3>
-
-              <motion.a
-                href="/instructors"
-                className="relative inline-block px-5 py-2 text-sm font-medium text-black border border-black group overflow-hidden mt-2 self-start"
-              >
-                <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-                  Learn More
-                </span>
-                <span className="absolute inset-0 w-0 h-full bg-black transition-all duration-300 group-hover:w-full z-0"></span>
-              </motion.a>
+            {/* Image setup remains similar */}
+            <div className="relative w-full h-72">
+              {/* Adjusted height slightly */}
+              <Image
+                src={instructor.image}
+                alt={instructor.name}
+                layout="fill" // Use fill layout for better responsiveness within fixed height container
+                objectFit="cover" // Keep object-cover
+                objectPosition="top" // Keep object-position
+              />
+            </div>
+            {/* Centered text content, adjusted padding */}
+            <div className="p-6 flex flex-col flex-grow text-center">
+              {/* Adjusted name styling */}
+              <h3 className="text-xl font-semibold mb-1">{instructor.name}</h3>
             </div>
           </motion.div>
         ))}

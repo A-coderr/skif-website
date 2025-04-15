@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { instructors } from "../data/instructors";
-import Title from "../components/Title";
 
 /**
  * Renders the Instructors section, displaying a list of instructors with
@@ -13,9 +12,7 @@ import Title from "../components/Title";
  */
 export default function Instructors() {
   return (
-    <section className="w-full px-6 pt-6 pb-16 max-w-7xl mx-auto">
-      <Title text="Meet Our Instructors" />
-
+    <section className="w-full p-6 my-10 max-w-7xl mx-auto">
       <div className="space-y-24">
         {instructors.map((instructor, idx) => {
           const isEven = idx % 2 === 0;

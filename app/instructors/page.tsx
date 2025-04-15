@@ -6,7 +6,11 @@ import Banner from "../components/Banner";
 export default function InstructorsPage() {
   return (
     <>
-      <Banner imageUrl="/karate.jpg" />
+      <Banner
+        imageUrl="/karate.jpg"
+        title="Meet Our Instructors"
+        page="Instructors"
+      />
       <Instructors />
     </>
   );

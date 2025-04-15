@@ -15,7 +15,11 @@ function MDXLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <Banner imageUrl={`${post?.image || "/hero.png"}`} />
+      <Banner
+        imageUrl={`${post?.image || "/hero.png"}`}
+        title={post.title}
+        page="Blog"
+      />
       <div className="max-w-7xl mx-auto px-4 py-20 prose">{children}</div>
       {post.gallery?.length > 0 && (
         <section className="max-w-7xl mx-auto px-4 pb-20">

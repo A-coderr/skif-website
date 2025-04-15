@@ -12,18 +12,28 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-[#a7c7e7] py-16 px-6">
+    <section className="bg-[#f5f5f5] py-16 px-6">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10">
+        <p className="text-md text-center uppercase text-[#B71C1C] tracking-widest mb-6">
+          FAQs
+        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-6">
           Frequently Asked Questions
         </h2>
+        <p className="text-center text-gray-600 text-md mb-8 md:max-w-1/2 mx-auto">
+          Here you&apos;ll find answers to the most commonly asked questions. If
+          you can&apos;t find what you&apos;re looking for, feel free to reach
+          out to us!
+        </p>
 
         <div className="space-y-6">
           {faqData.map((faq, index) => (
             <div key={index} className="bg-white overflow-hidden">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left px-6 py-4 focus:outline-none focus:ring-2 focus:ring-[#B71C1C] flex justify-between items-center"
+                className={`w-full text-left px-6 py-4 flex justify-between items-center ${
+                  activeIndex === index ? "border-b-2 border-[#B71C1C]" : ""
+                }`}
               >
                 <span className="text-lg font-medium text-gray-800">
                   {faq.question}

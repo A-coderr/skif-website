@@ -2,12 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { posts as blogPosts } from "../data/blogPosts";
-import Title from "../components/Title";
 
 export default function BlogGallery() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-6">
-      <Title text="Latest Blog Posts" />
+    <section className="max-w-7xl mx-auto p-6 my-10">
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {[...blogPosts].reverse().map((post, index) => (
           <motion.div
@@ -19,7 +17,7 @@ export default function BlogGallery() {
             viewport={{ once: true }}
           >
             <div className="relative w-full h-48">
-              <Image src={post.image} alt={post.title} fill priority />
+              <Image src={post.image} alt={post.title} layout="fill" />
             </div>
             <div className="p-6">
               <p className="text-sm text-gray-500 mb-1">

@@ -6,10 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useBanner } from "../context/BannerProvider";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const { showBanner } = useBanner();
 
   // Close mobile menu on scroll
   useEffect(() => {
@@ -29,7 +31,10 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full gap-30 bg-white shadow-md flex md:justify-center justify-between items-center p-2 md:px-10 z-20"
+      className={`fixed left-0 top-0 w-full z-40 bg-white shadow-md flex md:justify-center gap-35 justify-between items-center p-2 md:px-10 transition-all duration-300
+        md:${
+          showBanner ? "top-10" : "top-0"
+        } md:transition-all md:duration-300`}
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
