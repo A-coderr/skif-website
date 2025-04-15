@@ -33,7 +33,7 @@ const Banner = ({ imageUrl, title = "" }: BannerProps) => {
       />
       {/* Title overlay */}
       {title !== "" && (
-        <div className="z-10 px-4">
+        <div className="w-full max-w-7xl mx-auto z-10 px-4 py-6">
           <Title text={title} align="left" />
         </div>
       )}
