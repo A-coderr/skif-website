@@ -1,17 +1,55 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useBanner } from "../context/BannerProvider";
 
+const menuVariants = {
+  open: {
+    opacity: 1,
+    height: "auto",
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+      when: "beforeChildren",
+      staggerChildren: 0.07,
+    },
+  },
+  closed: {
+    opacity: 0,
+    height: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeIn",
+      when: "afterChildren",
+      staggerChildren: 0.05,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const linkVariants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.3 },
+  },
+  closed: {
+    opacity: 0,
+    y: -10,
+    transition: { duration: 0.2 },
+  },
+};
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const { showBanner } = useBanner();
+  const menuRef = useRef<HTMLDivElement>(null);
 
   // Close mobile menu on scroll
   useEffect(() => {
@@ -27,10 +65,27 @@ const Navbar = () => {
     setIsOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
   const handleLinkClick = () => setIsOpen(false);
 
   return (
     <motion.nav
+      ref={menuRef}
       className={`fixed left-0 top-0 w-full z-40 bg-white shadow-md flex md:justify-center gap-35 justify-between items-center p-2 md:px-10 transition-all duration-300
         md:${
           showBanner ? "top-10" : "top-0"
@@ -93,47 +148,29 @@ const Navbar = () => {
       </button>
 
       {/* Mobile Menu Dropdown */}
-      {isOpen && (
-        <motion.div
-          initial={false}
-          animate={isOpen ? "open" : "closed"}
-          variants={{
-            open: { opacity: 1, height: "auto", pointerEvents: "auto" },
-            closed: { opacity: 0, height: 0, pointerEvents: "none" },
-          }}
-          transition={{ duration: 0.3 }}
-          className="absolute top-full left-0 w-full bg-white flex flex-col items-center px-4 overflow-hidden shadow-md md:hidden"
-        >
-          <Link
-            href="/instructors"
-            className="text-lg cursor-pointer py-2"
-            onClick={handleLinkClick}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={menuVariants}
+            className="absolute top-full left-0 w-full bg-white flex flex-col items-center px-4 overflow-hidden shadow-md md:hidden z-30"
           >
-            Instructors
-          </Link>
-          <Link
-            href="/schedule"
-            className="text-lg cursor-pointer py-2"
-            onClick={handleLinkClick}
-          >
-            Schedule
-          </Link>
-          <Link
-            href="/blog"
-            className="text-lg cursor-pointer py-2"
-            onClick={handleLinkClick}
-          >
-            Blog
-          </Link>
-          <Link
-            href="/contact"
-            className="text-lg cursor-pointer py-2"
-            onClick={handleLinkClick}
-          >
-            Contact
-          </Link>
-        </motion.div>
-      )}
+            {["instructors", "schedule", "blog", "contact"].map((page) => (
+              <motion.div key={page} variants={linkVariants}>
+                <Link
+                  href={`/${page}`}
+                  className="text-lg cursor-pointer py-3 block text-center w-full"
+                  onClick={handleLinkClick}
+                >
+                  {page.charAt(0).toUpperCase() + page.slice(1)}
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };
