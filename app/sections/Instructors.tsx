@@ -12,7 +12,7 @@ import { instructors } from "../data/instructors";
  */
 export default function Instructors() {
   return (
-    <section className="w-full px-6 pt-6 pb-16 max-w-7xl mx-auto">
+    <section className="w-full p-6 my-10 max-w-7xl mx-auto">
       <div className="space-y-24">
         {instructors.map((instructor, idx) => {
           const isEven = idx % 2 === 0;

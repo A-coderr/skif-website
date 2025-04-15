@@ -43,7 +43,7 @@ const Tabs: React.FC<TabsProps> = ({ classes }) => {
   return (
     <>
       {/* Tabs for days */}
-      <div className="flex w-full overflow-x-auto no-scrollbar gap-2 px-2">
+      <div className="flex w-full overflow-x-auto no-scrollbar gap-2 px-2 pt-4">
         {days.map((day, index) => (
           <button
             key={index}
@@ -62,7 +62,7 @@ const Tabs: React.FC<TabsProps> = ({ classes }) => {
       </div>
 
       {/* Classes content */}
-      <div className="mt-4">
+      <div className="my-4">
         <div className="grid grid-cols-1 gap-4">
           {groupedClasses[days[activeTab]].map((classItem, index) => (
             <div key={index} className={`p-4 shadow-lg ${classItem.color}`}>
@@ -100,7 +100,7 @@ export default function ScheduleTable() {
   };
 
   return (
-    <section className="w-full min-h-[60vh] flex justify-center p-6">
+    <section className="w-full min-h-[60vh] flex justify-center p-6 md:my-10">
       <div className="flex flex-col w-full max-w-7xl justify-start">
         {/* Mobile Layout */}
         <motion.div

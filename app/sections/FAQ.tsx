@@ -32,9 +32,7 @@ export default function FAQ() {
               <button
                 onClick={() => toggleFAQ(index)}
                 className={`w-full text-left px-6 py-4 flex justify-between items-center ${
-                  activeIndex === index
-                    ? "border-b-2 border-[#B71C1C] bg-gray-200"
-                    : ""
+                  activeIndex === index ? "border-b-2 border-[#B71C1C]" : ""
                 }`}
               >
                 <span className="text-lg font-medium text-gray-800">

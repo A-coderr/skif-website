@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section className="w-full px-6 pt-6 pb-16 max-w-7xl mx-auto text-gray-800">
-      <div className="flex flex-col md:flex-row justify-between items-center py-6">
+    <section className="w-full p-6 my-10 max-w-7xl mx-auto text-gray-800">
+      <div className="flex flex-col md:flex-row justify-between items-center">
         {/* Left Side */}
         <motion.div
           className="w-full md:w-1/2 space-y-4 md:space-y-8 mb-6"
