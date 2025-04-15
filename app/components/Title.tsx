@@ -25,25 +25,25 @@ const alignmentMap: Record<NonNullable<TitleProps["align"]>, string> = {
 const Title = ({ text = "", align = "left" }: TitleProps) => {
   return (
     <div
-      className={`w-full ${alignmentMap[align]} relative inline-flex items-center pl-2 md:pl-4 py-2 my-6 md:my-10`}
+      className={`w-full ${alignmentMap[align]} relative inline-flex flex-col items-start pl-2 md:pl-4 py-2 my-6 md:my-10`}
     >
-      {/* Animated red line */}
-      <motion.div
-        className="absolute left-0 top-0 w-1 bg-[#B71C1C]"
-        initial={{ height: 0 }}
-        animate={{ height: "100%" }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      />
-
       {/* Title text */}
       <motion.h1
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white pl-2 md:pl-4"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         {text}
       </motion.h1>
+
+      {/* Animated red underline */}
+      <motion.div
+        className="mt-2 md:mt-4 h-1 bg-[#B71C1C] w-0"
+        initial={{ width: 0 }}
+        animate={{ width: "7%" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      />
     </div>
   );
 };

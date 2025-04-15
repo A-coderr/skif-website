@@ -7,7 +7,11 @@ import Banner from "../components/Banner";
 export default function SchedulePage() {
   return (
     <>
-      <Banner imageUrl="/karate.jpg" title="Class Schedule" />
+      <Banner
+        imageUrl="/schedule.webp"
+        title="Class Schedule"
+        page="Schedule"
+      />
       <ScheduleTable />
     </>
   );
