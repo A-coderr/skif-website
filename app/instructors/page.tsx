@@ -7,7 +7,7 @@ export default function InstructorsPage() {
   return (
     <>
       <Banner
-        imageUrl="/karate.jpg"
+        imageUrl="/banners/banner1.webp"
         title="Meet Our Instructors"
         page="Instructors"
       />
