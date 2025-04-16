@@ -51,6 +51,7 @@ export default function Pricing() {
             <ul className="text-gray-600 space-y-2 mb-6">
               <li>Weekly Classes</li>
               <li>Advanced Kata & Sparring</li>
+              <li>Competition Training</li>
               <li>Black Belt Preparation</li>
             </ul>
             <button className="bg-[#B71C1C] text-white px-6 py-2 rounded hover:bg-[#a61717] transition">
