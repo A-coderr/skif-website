@@ -50,10 +50,10 @@ export default function ClassesOfferedSection() {
           {/* Advanced & Black Belts */}
           <div className="flex flex-col items-center space-y-4">
             <FaUserGraduate size={30} className="text-[#B71C1C]" />
-            <h3 className="text-xl font-semibold">Advanced & Black Belts</h3>
+            <h3 className="text-xl font-semibold">Advanced & Elite</h3>
             <p className="text-md text-center max-w-xs">
-              Focus on high-level techniques, precision kata, and leadership in
-              training.
+              Focus on high-level techniques, precision kata, and advanced
+              sparring.
             </p>
           </div>
         </div>
