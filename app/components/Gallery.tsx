@@ -4,10 +4,10 @@ import Image from "next/image";
 import Masonry from "react-masonry-css";
 
 const images = [
-  { src: "/hero.jpg", alt: "Karate student training" },
-  { src: "/karate.jpg", alt: "Karate belt ceremony" },
-  { src: "/hero.jpg", alt: "Sparring practice" },
-  { src: "/karate.jpg", alt: "Karate team pose" },
+  { src: "/testimonials/testimonials1.webp", alt: "Karate student training" },
+  { src: "/testimonials/testimonials2.webp", alt: "Karate belt ceremony" },
+  { src: "/testimonials/testimonials3.webp", alt: "Sparring practice" },
+  { src: "/testimonials/testimonials4.webp", alt: "Karate team pose" },
 ];
 
 const breakpointColumnsObj = {
