@@ -4,7 +4,7 @@ export const classes = [
     time: "5:30 pm - 6:30 pm",
     start: 17.5,
     duration: 1,
-    name: "Kids",
+    name: "Beginners",
     color: "bg-[#d1fae5] text-black",
   },
   {
@@ -20,7 +20,7 @@ export const classes = [
     time: "7:30 pm - 9:00 pm",
     start: 19.5,
     duration: 1.5,
-    name: "Adults",
+    name: "Advanced",
     color: "bg-[#f87171] text-white",
   },
   {
@@ -28,7 +28,7 @@ export const classes = [
     time: "5:30 pm - 6:30 pm",
     start: 17.5,
     duration: 1,
-    name: "Kids",
+    name: "Beginners",
     color: "bg-[#d1fae5] text-black",
   },
   {
@@ -44,7 +44,7 @@ export const classes = [
     time: "7:30 pm - 9:00 pm",
     start: 19.5,
     duration: 1.5,
-    name: "Adults",
+    name: "Advanced",
     color: "bg-[#f87171] text-white",
   },
   {
@@ -52,7 +52,7 @@ export const classes = [
     time: "7:30 pm - 9:00 pm",
     start: 19.5,
     duration: 1.5,
-    name: "Tournament",
+    name: "Competition",
     color: "bg-[#8b5cf6] text-white",
   },
   {
@@ -60,7 +60,7 @@ export const classes = [
     time: "12:30 pm - 1:30 pm",
     start: 12.5,
     duration: 1,
-    name: "Kids",
+    name: "Beginners",
     color: "bg-[#d1fae5] text-black",
   },
   {
@@ -76,7 +76,7 @@ export const classes = [
     time: "2:30 pm - 4:00 pm",
     start: 14.5,
     duration: 1.5,
-    name: "Adults",
+    name: "Advanced",
     color: "bg-[#f87171] text-white",
   },
 ];
