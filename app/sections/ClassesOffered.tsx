@@ -33,7 +33,7 @@ export default function ClassesOfferedSection() {
             <FaChild size={30} className="text-[#B71C1C]" />
             <h3 className="text-xl font-semibold">Beginners</h3>
             <p className="text-md text-center max-w-xs">
-              Ages 4+ — Learn the basics of karate in a fun, supportive setting.
+              Ages 5+ — Learn the basics of karate in a fun, supportive setting.
             </p>
           </div>
 
