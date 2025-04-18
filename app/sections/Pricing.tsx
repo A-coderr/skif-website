@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Pricing() {
   return (
-    <section className="bg-[#fefefe] px-6 py-20 md:py-32">
+    <section className="bg-[#fefefe] px-6 py-20 md:py-32 bg-gray-900">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -12,13 +12,13 @@ export default function Pricing() {
         viewport={{ once: true }}
         className="max-w-7xl mx-auto text-center"
       >
-        <p className="text-md uppercase text-[#B71C1C] tracking-widest mb-4">
+        <p className="text-md uppercase text-[#a61717] tracking-widest mb-4">
           Pricing
         </p>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">
           Choose Your Plan
         </h2>
-        <p className="text-gray-600 max-w-xl mx-auto mb-16">
+        <p className="text-gray-500 max-w-xl mx-auto mb-16">
           Flexible options for all levels. Train regularly and grow at your
           pace.
         </p>
