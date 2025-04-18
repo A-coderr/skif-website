@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Pricing() {
   return (
-    <section className="bg-[#fefefe] px-6 py-20 lg:py-32">
+    <section className="bg-[#fefefe] px-6 py-20 md:py-32">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -23,27 +23,63 @@ export default function Pricing() {
           pace.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:max-w-4xl md:mx-auto">
           {/* Beginners & Intermediate */}
-          <div className="p-8 border rounded-xl shadow hover:shadow-lg transition duration-300">
+          <div className="py-8 px-2 bg-gray-100 shadow hover:shadow-lg transition duration-300">
             <h3 className="text-xl font-semibold mb-2">
               Beginners & Intermediate
             </h3>
-            <p className="text-4xl font-bold text-[#B71C1C] mb-4">
-              $80<span className="text-base font-normal">/month</span>
-            </p>
+
+            {/* Prices side-by-side in same format */}
+            <div className="flex flex-col md:flex-row md:gap-4 items-center justify-center mb-4 text-[#B71C1C]">
+              <p className="text-4xl font-bold">
+                $80<span className="text-base font-normal">/month</span>
+              </p>
+              <span className=" text-gray-600 text-lg">OR</span>
+              <p className="text-4xl font-bold">
+                $150<span className="text-base font-normal">/2 months</span>
+              </p>
+            </div>
+
             <ul className="text-gray-600 space-y-2 mb-6">
               <li>Weekly Classes</li>
               <li>Kata & Sparring</li>
+              <li>Competition Training</li>
               <li>Karate Fundamentals</li>
             </ul>
-            <button className="bg-[#B71C1C] text-white px-6 py-2 rounded hover:bg-[#a61717] transition">
-              Get Started
-            </button>
+
+            {/* Button */}
+            <div className="relative inline-block group">
+              {/* Border Square */}
+              <motion.span
+                initial={{ opacity: 0, x: 0, y: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+                className="absolute top-0 left-0 w-full h-full border-1 border-[#B71C1C] 
+        transition-transform duration-300 
+        group-hover:translate-x-0 group-hover:translate-y-0 
+        translate-x-2 translate-y-2 pointer-events-none z-0"
+              />
+
+              <motion.a
+                href="/contact"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="relative block bg-[#B71C1C]
+        text-white text-md md:text-base font-semibold tracking-wide 
+        px-6 py-3 overflow-hidden transition-all duration-300 
+        hover:bg-[#a61717] z-10"
+              >
+                <span className="relative z-10 transition-colors duration-300">
+                  Get Started
+                </span>
+              </motion.a>
+            </div>
           </div>
 
-          {/* Advanced */}
-          <div className="p-8 border rounded-xl shadow hover:shadow-lg transition duration-300">
+          {/* Advanced & Elite */}
+          <div className="py-8 px-2 bg-gray-100 shadow hover:shadow-lg transition duration-300">
             <h3 className="text-xl font-semibold mb-2">Advanced & Elite</h3>
             <p className="text-4xl font-bold text-[#B71C1C] mb-4">
               $90<span className="text-base font-normal">/month</span>
@@ -54,23 +90,35 @@ export default function Pricing() {
               <li>Competition Training</li>
               <li>Black Belt Preparation</li>
             </ul>
-            <button className="bg-[#B71C1C] text-white px-6 py-2 rounded hover:bg-[#a61717] transition">
-              Join Now
-            </button>
-          </div>
+            {/* Button */}
+            <div className="relative inline-block group">
+              {/* Border Square */}
+              <motion.span
+                initial={{ opacity: 0, x: 0, y: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+                className="absolute top-0 left-0 w-full h-full border-1 border-[#B71C1C] 
+                   transition-transform duration-300 
+                   group-hover:translate-x-0 group-hover:translate-y-0 
+                   translate-x-2 translate-y-2 pointer-events-none z-0"
+              />
 
-          {/* Special Offer */}
-          <div className="p-8 border-2 border-[#B71C1C] rounded-xl shadow-lg bg-[#fff8f8] relative overflow-hidden">
-            <span className="absolute top-4 right-4 bg-[#B71C1C] text-white text-sm px-3 py-1 rounded-full">
-              Best Value
-            </span>
-            <h3 className="text-xl font-semibold mb-2">Special Offer</h3>
-            <p className="text-4xl font-bold text-[#B71C1C] mb-4">
-              $150<span className="text-base font-normal">/2 months</span>
-            </p>
-            <button className="bg-[#B71C1C] text-white px-6 py-2 rounded hover:bg-[#a61717] transition">
-              Grab Offer
-            </button>
+              <motion.a
+                href="/contact"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="relative block bg-[#B71C1C]
+                   text-white text-md md:text-base font-semibold tracking-wide 
+                   px-6 py-3 overflow-hidden transition-all duration-300 
+                   hover:bg-[#a61717] z-10"
+              >
+                {/* Button label */}
+                <span className="relative z-10 transition-colors duration-300">
+                  Get Started
+                </span>
+              </motion.a>
+            </div>
           </div>
         </div>
       </motion.div>
