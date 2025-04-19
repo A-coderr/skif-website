@@ -20,8 +20,8 @@ export const faqData: FAQItem[] = [
       "Yes, we offer private one-on-one training sessions with our experienced instructors to suit your schedule and learning style.",
   },
   {
-    question: "Do you offer trial classes?",
+    question: "Do you offer a trial class?",
     answer:
-      "Absolutely! We encourage new students to come try a class to see if our dojo is the right fit for them.",
+      "Yes, we offer a free trial class for new students. It’s a great opportunity to experience our training environment, meet our instructors, and see if our classes are the right fit for you or your child.",
   },
 ];
