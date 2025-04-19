@@ -5,23 +5,23 @@ type FAQItem = {
 
 export const faqData: FAQItem[] = [
   {
-    question: "What age groups do you accept?",
+    question: "At what age can kids start training?",
     answer:
-      "We welcome students of all ages, from young children to adults. Our classes are tailored to different skill and age levels.",
+      "Children can begin training with us as early as age 5. Our programs are designed to be fun, engaging, and age-appropriate, helping young students build confidence, discipline, and coordination from the very start.",
   },
   {
-    question: "Do I need any experience to join?",
+    question: "What should I wear to the first class?",
     answer:
-      "No experience is necessary! We have beginner classes and our instructors guide everyone step by step.",
+      "Students can wear comfortable athletic clothing — like a t-shirt and sweatpants or shorts. No special gear is needed.",
   },
   {
-    question: "Are private classes available?",
+    question: "AWhat are the benefits of karate?",
     answer:
-      "Yes, we offer private one-on-one training sessions with our experienced instructors to suit your schedule and learning style.",
+      "Karate helps students build confidence, discipline, focus, and respect—both on and off the mat. It also improves physical fitness, coordination, and self-defense skills, making it a great all-around activity for growth and development.",
   },
   {
-    question: "Do you offer trial classes?",
+    question: "Do you offer a trial class?",
     answer:
-      "Absolutely! We encourage new students to come try a class to see if our dojo is the right fit for them.",
+      "Yes, we offer a free trial class for new students. It’s a great opportunity to experience our training environment, meet our instructors, and see if our classes are the right fit for you or your child.",
   },
 ];

@@ -18,15 +18,15 @@ import { motion } from "framer-motion";
 
 export default function InstructorsHome() {
   return (
-    <section id="instructors" className="py-16 px-4 bg-gray-900 text-gray-300">
+    <section id="instructors" className="py-16 px-4 bg-[#f5f5f5] text-gray-300">
       <div className="w-full max-w-4xl mx-auto text-center mb-12">
         <p className="text-md text-center uppercase text-[#B71C1C] tracking-widest mb-6">
           Instructors
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-6">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-6">
           Meet Our Instructors
         </h2>
-        <p className="text-center text-gray-500 text-md mb-8 md:max-w-2/3 mx-auto">
+        <p className="text-center text-gray-600 text-md mb-8 md:max-w-2/3 mx-auto">
           Our dedicated instructors bring years of experience, passion, and
           discipline to every class. Whether you&apos;re a beginner or advancing
           through the ranks, they are here to guide, motivate, and help you grow

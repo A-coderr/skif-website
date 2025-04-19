@@ -32,7 +32,7 @@ export default function HeroSection() {
       />
 
       {/* Foreground Layer */}
-      <div className=" flex flex-col items-center justify-center relative text-center">
+      <div className="flex flex-col items-center justify-center relative text-center">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,18 +49,36 @@ export default function HeroSection() {
         >
           Our passion is Karate-Do
         </motion.p>
-        <motion.a
-          href="/contact"
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="relative px-5 py-2 mt-15 text-lg font-thin text-white border-1 border-white overflow-hidden transition-all duration-300 group"
-        >
-          <span className="relative z-5 transition-all duration-300 group-hover:text-gray-900">
-            Contact Us
-          </span>
-          <span className="absolute top-0 left-0 w-0 h-full bg-white transition-all duration-300 group-hover:w-full"></span>
-        </motion.a>
+
+        {/* Button */}
+        <div className="relative inline-block group mt-8">
+          {/* Border Square */}
+          <motion.span
+            initial={{ opacity: 0, x: 0, y: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+            className="absolute top-0 left-0 w-full h-full border-1 border-white 
+                   transition-transform duration-300 
+                   group-hover:translate-x-0 group-hover:translate-y-0 
+                   translate-x-2 translate-y-2 pointer-events-none z-0"
+          />
+
+          <motion.a
+            href="/contact"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="relative block bg-[#B71C1C]
+                   text-white text-md md:text-base font-semibold tracking-wide 
+                   px-6 py-3 overflow-hidden transition-all duration-300 
+                   hover:bg-[#a61717] z-10"
+          >
+            {/* Button label */}
+            <span className="relative z-10 transition-colors duration-300">
+              Contact Us
+            </span>
+          </motion.a>
+        </div>
       </div>
     </section>
   );
