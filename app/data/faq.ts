@@ -5,9 +5,9 @@ type FAQItem = {
 
 export const faqData: FAQItem[] = [
   {
-    question: "What age groups do you accept?",
+    question: "At what age can kids start training?",
     answer:
-      "We welcome students of all ages, from young children to adults. Our classes are tailored to different skill and age levels.",
+      "Children can begin training with us as early as age 5. Our programs are designed to be fun, engaging, and age-appropriate, helping young students build confidence, discipline, and coordination from the very start.",
   },
   {
     question: "Do I need any experience to join?",
