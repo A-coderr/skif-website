@@ -10,9 +10,9 @@ export const faqData: FAQItem[] = [
       "Children can begin training with us as early as age 5. Our programs are designed to be fun, engaging, and age-appropriate, helping young students build confidence, discipline, and coordination from the very start.",
   },
   {
-    question: "Do I need any experience to join?",
+    question: "What should I wear to the first class?",
     answer:
-      "No experience is necessary! We have beginner classes and our instructors guide everyone step by step.",
+      "Students can wear comfortable athletic clothing — like a t-shirt and sweatpants or shorts. No special gear is needed.",
   },
   {
     question: "Are private classes available?",
