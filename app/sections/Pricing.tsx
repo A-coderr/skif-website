@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Pricing() {
   return (
-    <section className="bg-[#fefefe] px-6 py-20 md:py-32 bg-gray-900">
+    <section className="px-6 py-20 md:py-32 bg-gray-900">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ export default function Pricing() {
               <p className="text-4xl font-bold">
                 $80<span className="text-base font-normal">/month</span>
               </p>
-              <span className=" text-gray-600 text-lg">OR</span>
+              <span className="text-gray-600 text-lg">OR</span>
               <p className="text-4xl font-bold">
                 $150<span className="text-base font-normal">/2 months</span>
               </p>
