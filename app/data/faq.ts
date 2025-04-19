@@ -15,9 +15,9 @@ export const faqData: FAQItem[] = [
       "Students can wear comfortable athletic clothing — like a t-shirt and sweatpants or shorts. No special gear is needed.",
   },
   {
-    question: "Are private classes available?",
+    question: "AWhat are the benefits of karate?",
     answer:
-      "Yes, we offer private one-on-one training sessions with our experienced instructors to suit your schedule and learning style.",
+      "Karate helps students build confidence, discipline, focus, and respect—both on and off the mat. It also improves physical fitness, coordination, and self-defense skills, making it a great all-around activity for growth and development.",
   },
   {
     question: "Do you offer a trial class?",
